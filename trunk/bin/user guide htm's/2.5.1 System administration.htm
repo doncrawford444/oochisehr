@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="oochis manual.css">
+</head>
+<body>
+<h2 id="sectionHeader">2.5.1 System administration</h2>
+<p id="indentedParagraph">
+<font color="#8B0000">'Set up'</font> ('System' &#8594 'Set up'):<br>
+This feature is only available to the system administrators and users authorized with administrator privileges. 'Set up' manages network URIs and the system administrators' user names and passwords.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Login attempts allowed'</font> ('System' &#8594 'Set up' &#8594 'Login attempts allowed: '):<br>
+There is a maximum number of 'Login attempts allowed' before the system administrator is required to login. The number of login attempts allowed is set by the system administrators in 'System' &#8594 'Set-up'. The 'Login' screen will indicate if the system administrators is required to login, and there is no limit to the number of login attempts for the system administrators. If the system administrator's user name and password does not work (fails to authenticate) for any reason, there is an emergency access method (see &quotemergency access&quot). Like the system administrators logins, there is no limit to the number of log in attempts using the emergency access method.
+<br><br>
+Also, the 'Login' screen's user name and password fields will both automatically clear if two minutes have elapsed without input. The clearing of fields does not count for a login attempt.
+<br>
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'System administrator's user name: '</font> ('System' &#8594 'Set up' &#8594 'System administrators' user name: '):<br>
+Change the system administrator's user name by entering the new name in the field. Each device in a Oochis EHR system must have the same system administrators user name and password. The same system administrators manages multiple devices, as well as user accounts.
+<br>
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'System administrator's password: '</font> ('System' &#8594 'Set up' &#8594 'System administrators' password: '):<br>
+Change the system administrators password by entering the new password in the field. Each device in a Oochis EHR system must have the same system administrators user name and password. The same system administrators manages multiple devices, as well as user accounts.
+<br>
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'System administrator's password (re-enter): '</font> ('System' &#8594 'Set up' &#8594 'System administrators' password (re-enter): '):<br>
+Re-enter the system administrator's new password.
+<br>
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Program directory URI: ' </font> ('System' &#8594 'Set up' &#8594 'Program directory URI: '):<br>
+Enter the directory for program files. Program files are: vocabulary databases, EHR data, provider data (root admin, EHR data, user files, notepads....
+<br><br>
+enc/: Contains patient EHR data files. Each file contains all the available health information on one and only one patient both recorded and imported. &quotAvailable health information,&quot does not necessarily mean all health information. The responsibility of recording and storing EHR data is up to the individual health care providers, and may not be locatable; or, may still be left partially undigitized or unencoded in providers' paper-based charts.
+<br><br>
+images/: Contains images found throughout the program
+<br><br>
+lib/: Contains imports (third-party classes not the core java.awt, or java.swing, util...Sun widgets)
+<br><br>
+medical_code_sets/: Contains encrypted vocabulary meta-thesauri flat database files for: HL-7, LOINC, RXNORM, ICD; and CPT. Also contains a biomoiety thesaurus for 'Decision Support' 'Translational Medicine' functionality.
+<br><br>
+narrative/: Contains the note pad and content and files imported into the workspace.
+<br><br>
+sys/: Contains the system administrators' root administrative settings and info.
+<br><br>
+test_files/: Contains developmental test files.
+<br><br>
+usr/: Contains user account files.
+<br>
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Program directory URI: '</font> ('System' &#8594 'Set up' &#8594 'Network node directory URI: '):<br>
+Enter the URI of the network directory (a system directory accessible by all networked devices). This network directory is where system files are located to enable networked devices.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Claims file URI: '</font> ('System' &#8594 'Set up' &#8594 'Claims file URI: '):<br>
+Enter the URI of where to place a claims folder (a tab-deliminated, computer-readable, text file of medically encoded health data entries). The file is the same as the printable report found in: 'Practice Assistant', 'Reports', 'Coded entries'.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Browser executable URI: '</font> ('System' &#8594 'Set up' &#8594 'Browser executable URI: '):<br>
+Enter the location of a secured Mozilla Firefox executable. The browser that Oochis EHR uses is a special security-enhanced Internet browser. {{{ships with or without Oochis EHR}}}
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Create desktop icon: '</font> ('System' &#8594 'Set up' &#8594 'Create desktop icon: '):<br>
+A Oochis EHR icon will be placed on the desktop. Alternatively, the icon will be placed in the device's '/user/home/' directory if no '/desktop/' directory is found.
+<br>
+</p>
+</body>
+</html>

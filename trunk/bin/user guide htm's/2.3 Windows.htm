@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="oochis manual.css">
+</head>
+<body>
+<h2 id="sectionHeader">2.3 Windows</h2>
+<p>
+Oochis EHR contains five main windows and a login screen:
+<br><br>
+Common parts to each of the five main windows:
+<br>
+<ol>
+   <li>Window background panels</li>
+   <li>Title bar</li>
+   <li>Minimize button</li>
+   <li>Close button</li>
+   <li>Talk-back bar</li>
+   <li>Primary feature buttons</li>
+   <li>The content area</li>
+</ol>
+<br>
+</p>
+<p id="indentedParagraph">
+<font color="#8B0000">'Talk-back bar'</font> ('Workspace' &#8594 'Talk-back bar'):<br>
+The white area under the title bar is the, &quottalk-back bar.&quot The talk-back bar gives users narrative feedback. The talk-back bar flashes a large asterisk when something does not go as expected (such as performing an action that is missing required input).
+</p>
+<p>
+Each window is able to become full-screen by double-clicking the title-bar. Double-click the title-bar again to return the window to it's previous size and location.
+<br><br>
+Controlling windows:
+<br>
+Pressing ALT while opening a chart restores the same arrangement of windows and content as when the chart was last closed.
+<br><br>
+Double-click the title bars to maximize window size. Windows may also be minimized to an icon on the workspace (Oochis EHR's, &quotdesktop&quot). A closed window is merely invisible until it is made visible again.
+<br><br>
+Main windows and the note pad have two buttons on the top right of their title-bars. The left (green) button is the window's, &quotminimize button,&quot that shrinks the window to an icon on the workspace. The icon displays the window's content, indicating whether a page is open (and displaying worked-on data), and where. helping alleviate information overload by guiding the user's awareness of the information being managed. The right (blue) button closes the window completely. To open a window, click on the window's workspace icon (if visible) or task bar button.
+<br><br>
+Windows may be made smaller and larger by dragging their borders.
+<br><br>
+Viewing health information (content) in windows:
+<br>
+All printable health information is displayed on pages. Content unable to be printed (such as media) may be playable within the bounds of the item, on the page. Formatted content larger than the bounds on the page is played at full resolution. Special equipment (such as for higher-than-normal and 3D resolutions and proper sound reproduction) may be needed to interface with some content. Some content may not be digitized for proper inclusion into an EHR. Examples include radiograms, teeth, slides, unreadable storage devices, and holographic media. However, if content is not displayed on a page—on-screen or printed—then a description and location (URI or a physical address [for biological specimens]) for the content are displayed within the bounds of the item, on the printable page, as viewed in the window.
+<br><br>
+Examples of printable Oochis EHR content includes: demographic and insurance information, clinical notes, incoming orders, emails, alerts, reminders, logs, reports, schedules, items copied from the clipboard. Examples of non-printable Oochis EHR content includes: radiological; audio; video, and unrecognizable files (such as that pasted from the operating system's clipboard).
+<br><br>
+Categories of information (content) in windows:
+<br>
+Chart pages record all EHR information. All other pages in the Oochis EHR application record provider information. Provider information may or may not also be confidential patient information (clinical notes, incoming laboratory results, logs of medical orders).
+<br><br>
+Five chart sections are were data are entered:
+<br><br>
+Recording chart content:
+<br><br>
+Demographic and Insurance:
+<br><br>
+Demographic and insurance sections have items entered into medical forms created in Templates. Activities are entered via the CPOE panel, and items in the history section are manually transfered from the Activities section. Items on the chart cover are entered elsewhere in the chart and are only displayed for convenient patient and chart identification. Other means of recording information include importing content from HL-7 messages and CCR files.
+<br><br>
+A chart template is a collection of medical forms created in 'System' &#8594 'Templates'. Each entry on every form (or, &quotpage&quot) is identified with a unique medical code. Medical codes are specified for demographic and insurance items using during creation of chart templates. Medical codes for activities are specified with the creation of the entered orders in the CPOE panel. The recorded technical details are specified by rules that come with each medical code set (see &quotAppended encoded chart data&quot).
+<br><br>
+Recording chart content — attachments:
+<br>
+Any content that can be added to an EHR entry can be added as an email or text message attachment. Content (attachments) includes pages such as clinical notes and decision support analyses, imported content (or files), or content copied from an area on a page. Import from other applications normally using cut, copy, paste, drag, and drop. Also add content using the network system file chooser available in the charts window, the note pad, and the Internet browser.
+<br><br>
+Right-click on the links to attachments on the medical forms to view the attachment in a detailed page.
+<br><br>
+Recording chart content — technical details:
+<br>
+The non-technical details of an encoded item are it's medical code description and data content. Technical details are everything else recorded with the.... item. Detailed pages are the complete printable EHR.
+<br><br>
+Clicking 'View details' (vs. 'View medical forms') displays all the details of existing demographics and insurance EHR data by moving to that item in the detailed page (and vs. versus.).
+<br><br>
+The demographic and insurance sections are divided into medical forms and detailed pages. The purpose of medical form (or, &quotfront-end,&quot) pages is to communicate EHR content with standardized (encoded) descriptions, and without unnecessary details. Demographic and insurance items are labeled in 'Templates' with the content description of the medical code found in the item's vocabulary (meta-thesaurus). Medical form pages are for quick and clear recording and retrieval of needed (patient) health information. while using standard vocabularies removes ambiguity in terms, having the same input output objects in the same practice provide the same informational CONTEXT. In 'System' 'Templates', medical codes are used to create labeled data entry items that display only an area to input data and their content descriptions.
+<br><br>
+Clicking 'View details' displays all the details of existing demographics and insurance EHR data. The do not ascribe to the template, and does not show any missing item entries that the medical forms created in Templates may.
+<br><br>
+Appended encoded chart data:
+<br>
+Detailed pages provide complete recorded details about entered data (examples: the time the item was filled-in; by whom; and any changes to the item). Detailed pages do not provide for data entry.
+<br><br>
+The complete encoded technical details (including any history) of each chart entry is located in the second half of each chart section (see &quotAppended encoded chart data&quot). Medical forms are at the beginning of the demographics and insurance sections, and do not include technical details. The purpose of chart pages are to reproduce information in an easily recognizable format, and to provide
+detailed information on demand.
+<br><br>
+Only one chart may be open at any one time. And, a chart must be open for patient information to be displayed anywhere. When a chart is closed, all non-aggregate patient information is cleared from every object in Oochis EHR.
+<br><br>
+Features that use patient-identifiable information require a chart to be open. When a chart is closed, all patient-identifiable information is cleared from every object in Oochis EHR, and all functions revert back to using and displaying aggregate information only.
+<br><br>
+Features that use chart data:
+<br>
+<ul>
+   <li>'System' &#8594 'User accounts' &#8594 'Authorizations'</li>
+   <li>'Messaging'</li>
+   <li>'Decision Support' &#8594 'Query'</li>
+   <li>'Decision Support' &#8594 'Statistics'</li>
+   <li>'Decision Support' &#8594 'Treatment Analysis' &#8594 'Cost analysis'</li>
+   <li>'Decision Support' &#8594 'Treatment Analysis' &#8594 'Treatment effect'</li>
+   <li>'Decision Support' &#8594 'Treatment Analysis' &#8594 'Decision models'</li>
+   <li>'Decision Support' &#8594 'Treatment Analysis' &#8594 'Life expectancy'</li>
+   <li>'Decision Support' &#8594 'Treatment Analysis' &#8594 'Optimized life expectancy'</li>
+   <li>'Decision Support' &#8594 'Rules'</li>
+   <li>'Decision Support' &#8594 'Translational medicine'</li>
+   <li>'Practice Assistant' &#8594 'Patient index' will move to where the chart is listed.</li>
+   <li>'Practice Assistant' &#8594 'Billing' will show only the chart's billed entries.</li>
+   <li>'Practice Assistant' &#8594 'Reports'</li>
+   <li>'Practice Assistant' &#8594 'Appointment schedules' will show only the chart's appointments.</li>
+   <li>'Practice Assistant' &#8594 'View medical codes' will only list medical codes in the chart's data.</li>
+</ul>
+<br><br>
+Also, a chart (the 'Charting' window per se) can be dropped onto the 'System' &#8594 'Templates' panel to open the chart's template for editing, but this feature does not change the chart's existing template, nor access (or alter) any health information.
+<br><br>
+Oochis EHR manages information overload by:
+<br>
+<ol>
+   <li>Reducing the computerized medical work flow to multitasking in five windowed (conceptual) reference frames (simply, &quotwindows&quot).</li>
+   <li>Eschewing introduction of new, extraneous work flow practices and adopting established medical objects (such as printable chart pages collected in a manila chart folder, a recognizable scheduling calendar).</li>
+   <li>Working the same on the widest range of hardware (including computer desktops, laptops, and tablets; and [smart] phones).</li>
+   <li>Combining the graphical presentation of a medical concepts (business objects) with all other attributes, including business processes and associated executive requirements, into printable source code serving as precise medical concepts (business objects that can be intuitively evaluated and immediately worked on).</li>
+</ol>
+</p>
+</body>
+</html>

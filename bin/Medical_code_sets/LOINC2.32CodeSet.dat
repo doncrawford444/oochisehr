@@ -1,0 +1,407 @@
+LOINC(R) Database Version 2.32
+Released June 2010
+ASCII Text Version
+
+Please send questions and comments to:
+Regenstrief Institute, Inc., Attn: LOINC Developer
+Medical Informatics
+Health Information and Translational Sciences (HITS) Building
+410 West 10th Street, Suite 2000
+Indianapolis, IN 46202
+E-mail:  loinc@regenstrief.org
+
+This and other relevant documents are available via
+
+http://loinc.org
+
+                   Copyright Notice and License
+
+The LOINC(r) codes, LOINC(r) table (regardless of format), LOINC(r) Release 
+Notes, LOINC(r) Changes File, and LOINC(r) Users' Guide are copyright 
+(c) 1995-2010, Regenstrief Institute, Inc. and the Logical Observation 
+Identifiers Names and Codes (LOINC) Committee.  All rights reserved.  
+
+The RELMA(r) program, RELMA(r) database (subject to the copyright above with 
+respect to the LOINC(r) codes and LOINC(r) table included therein), RELMA(r) 
+Release Notes, and RELMA(r) Users' Manual are copyright (c) 1995-2010, 
+Regenstrief Institute, Inc.  All rights reserved.
+
+The LOINC(r) panels and forms file and the LOINC(r) hierarchies file 
+(subject to the copyright above with respect to the LOINC(r) codes and LOINC(r) 
+table to the extent included in the LOINC(r) panels and forms file and the 
+LOINC(r) hierarchies file), are copyright (c) 1995-2010, Regenstrief Institute, 
+Inc.  All rights reserved.
+
+LOINC(r) and RELMA(r) are registered United States trademarks of Regenstrief 
+Institute, Inc.  
+
+Permission is hereby granted in perpetuity, without payment of license fees or 
+royalties, to use, copy, or distribute the RELMA(r) program, RELMA(r) Users' 
+Manual, RELMA(r) Release Notes, RELMA(r) database, LOINC(r) codes, LOINC(r) 
+Users' Guide, LOINC(r) table (in all formats in which it is distributed by 
+Regenstrief Institute, Inc. and the LOINC Committee), LOINC(r) Release Notes, 
+LOINC(r) Changes File, LOINC(r) panels and forms file, and LOINC(r) 
+hierarchies file (collectively, the "Licensed Materials") for any commercial 
+or non-commercial purpose, subject to the following terms and conditions:
+      
+      1)	To prevent the dilution of the purpose of the LOINC codes and LOINC 
+table of providing a definitive standard for identifying clinical information 
+in electronic reports, users shall not use any of the Licensed Materials for 
+the purpose of developing or promulgating a different standard for identifying 
+patient observations, such as laboratory test results; other diagnostic service 
+test results; clinical observations and measurements; reports produced by 
+clinicians and diagnostic services about patients; panels, forms and 
+collections that define aggregations of these observations; and orders for 
+these entities  in electronic reports and messages.
+
+      2)	If the user elects to utilize the RELMA program, users receive the 
+full RELMA database with the RELMA program, including the LOINC table and other 
+database tables comprising the RELMA database.  In addition to its use with 
+the RELMA program, users may use the LOINC table by itself and may modify the 
+LOINC table as permitted herein.  Users may not use or modify the other 
+database tables from the RELMA database except in conjunction with their 
+authorized use of the RELMA program, unless prior written permission is granted 
+by the Regenstrief Institute, Inc.  To request written permission, please 
+contact loinc@regenstrief.org.
+
+      3)	Users shall not change the meaning of any of the LOINC codes.  
+Users shall not change the name of, or any contents of, any fields in the 
+LOINC table.  Users may add new fields to the LOINC table to attach additional 
+information to existing LOINC records.  Users shall not change the content or 
+structure of the LOINC panels and forms from the LOINC panels and forms file, 
+but may notify the Regenstrief Institute of any potential inconsistencies or 
+corrections needed by contacting loinc@regenstrief.org. 
+
+      4)	A user may delete records from the LOINC table to deal with the 
+user's local requirements.  A user also may add new records to the LOINC table 
+to deal with the users' local requirements, provided that if new records are 
+added, any new entry in the LOINC_NUM field (field #1) of such new records 
+must contain a leading alphabetic "X" so that the new codes and records cannot 
+be confused with existing LOINC codes or new LOINC codes as they are defined 
+in later releases of the LOINC table.  Records deleted or added by users to 
+deal with local requirements are not reflected in the official LOINC table 
+maintained by the Regenstrief Institute and the LOINC Committee.  Users must 
+also make reasonable efforts to submit requests to LOINC for new records to 
+cover observations that are not found in the LOINC table in order to minimize 
+the need for X-codes.
+
+      5)	LOINC codes and other information from the LOINC table may be used 
+in electronic messages for laboratory test results and clinical observations 
+such as HL7 ORU messages, without the need to include this Copyright Notice 
+and License or a reference thereto in the message (and without the need to 
+include all fields required by Section 7 hereof).  When the LOINC code (from 
+the LOINC_NUM field) is included in the message, users are encouraged, 
+but not required, to include the corresponding LOINC short name (from the 
+SHORTNAME field) or the LOINC long common name (from the LONG_COMMON_NAME 
+field) in the message if the message provides a place for a text name 
+representation of the code. 
+
+      6)	Users may make and distribute an unlimited number of copies of the 
+Licensed Materials.  Each copy thereof must include this Copyright Notice and 
+License, and must include the appropriate version number of the Licensed 
+Materials if the Licensed Materials have a version number, or the release 
+date if the Licensed Materials do not have a version number.  This Copyright 
+Notice and License must appear on every printed copy of the LOINC table.  
+Where the Licensed Materials are distributed on a fixed storage medium (such 
+as diskette or CD-ROM), a printed copy of this Copyright Notice and License 
+must be included on or with the storage medium, and a text file containing 
+this information also must be stored on the storage medium in a file called 
+"license.txt".  Where the Licensed Materials are distributed via the Internet, 
+this Copyright Notice and License must be accessible on the same Internet page 
+from which the Licensed Materials are available for download. This Copyright 
+Notice and License must appear verbatim on every electronic or printed copy 
+of the RELMA Users' Manual and the LOINC Users' Guide.  The RELMA Users' 
+Manual and the LOINC Users' Guide may not be modified, nor may derivative 
+works of the RELMA Users' Manual or LOINC Users' Guide be created, without 
+the prior written permission of the Regenstrief Institute, Inc.  To request 
+written permission, please contact loinc@regenstrief.org.  The Regenstrief 
+Institute retains the right to approve any modification to, or derivative work 
+of, the RELMA Users' Manual or the LOINC Users' Guide.
+
+      7)	Subject to Section 1 and the other restrictions hereof, users may 
+incorporate portions of the LOINC table, LOINC panels and forms file, and 
+LOINC hierarchies file into another master term dictionary (e.g. laboratory 
+test definition database), or software program for distribution outside of the 
+user's corporation or organization, provided that any such master term 
+dictionary or software program includes the following fields reproduced in 
+their entirety from the LOINC table: LOINC_NUM (field #1), COMPONENT (field #2),
+PROPERTY (field #3), TIME_ASPCT (field #4), SYSTEM (field #5), SCALE_TYP 
+(field #6), METHOD_TYP (field #7), ANSWERLIST (field #14), STATUS (field #15), 
+and SHORTNAME (field #39). Users are also required to either: (1) include the 
+EXTERNAL_COPYRIGHT_NOTICE (field #43) or (2) delete the rows that include 
+third party copyrighted content (e.g., third party survey instruments 
+and answers). If third party content is included, users are required to comply 
+with any such third party copyright license terms. Users are encouraged, but 
+not required, to also include the RelatedNames2 (field #38) and the 
+LONG_COMMON_NAME (field #46) in any such database.  Further description of 
+these fields is provided in Appendix A of the LOINC Users' Guide.  Every 
+copy of the LOINC table, LOINC panels and forms file, and/or LOINC hierarchies 
+file incorporated into or distributed in conjunction with another database or 
+software program must include the following notice:  
+
+	"This product includes all or a portion of the LOINC(r) table, LOINC 
+	panels and forms file, and/or LOINC hierarchies file, or is derived 
+	from one or more of the foregoing, subject to a license from 
+	Regenstrief Institute, Inc.  Your use of the LOINC table, LOINC codes, 
+	LOINC panels and forms file, and LOINC hierarchies file also is 
+	subject to this license, a copy of which is available at 
+	http://loinc.org/terms-of-use.  The current complete LOINC table, 
+	LOINC Users' Guide, LOINC panels and forms file, and LOINC 
+	hierarchies file are available for download at http://loinc.org.  
+	The LOINC table and LOINC codes are copyright (c) 1995-2010, 
+	Regenstrief Institute, Inc. and the Logical Observation Identifiers 
+	Names and Codes (LOINC) Committee.  The LOINC panels and forms file 
+	and LOINC hierarchies file are copyright (c) 1995-2010, Regenstrief 
+	Institute, Inc.  All rights reserved.  THE LOINC TABLE (IN ALL 
+	FORMATS), LOINC PANELS AND FORMS FILE, AND LOINC HIERARCHIES ARE 
+	PROVIDED "AS IS."  ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, 
+	INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF 
+	MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  LOINC(r) is 
+	a registered United States trademark of Regenstrief Institute, Inc. 
+	A small portion of the LOINC table may include content (e.g., survey 
+	instruments) that is subject to copyrights owned by third parties. 
+	Such content has been mapped to LOINC terms under applicable copyright 
+	and terms of use. Notice of such third party copyright and license 
+	terms would need to be included if such content is included."  
+
+If the master term dictionary or software program containing the LOINC table, 
+LOINC panels and forms file, and/or LOINC hierarchies file is distributed 
+with a printed license, this statement must appear in the printed license.  
+Where the master term dictionary or software program containing the LOINC 
+table, LOINC panels and forms file, and/or LOINC hierarchies file is 
+distributed on a fixed storage medium, a text file containing this 
+information also must be stored on the storage medium in a file called 
+"LOINC_short_license.txt".  Where the master term dictionary or 
+software program containing the LOINC table, LOINC panels and forms 
+file, and/or LOINC hierarchies file is distributed via the Internet, 
+this information must be accessible on the same Internet page from 
+which the product is available for download.
+
+      8)	Use and distribution of the Licensed Materials in ways that 
+are not specifically discussed herein shall always be accompanied by the 
+notice provided in Section 7 hereof.  The guidelines for providing the 
+notice that are contained in the last paragraph of Section 7 also shall 
+apply.  If a user has a question about whether a particular use of any 
+of the Licensed Materials is permissible, the user is invited to contact 
+the Regenstrief Institute by e-mail at loinc@regenstrief.org.  
+
+      9)	If the user desires to translate any of the Licensed Materials into 
+a language other than English, then user shall notify Regenstrief via email at 
+loinc@regenstrief.org.  Any such translation is a derivative work, and the 
+user agrees and does hereby assign all right, title and interest in and to 
+such derivative work: (1) to Regenstrief and the LOINC Committee if the 
+translation is a derivative of the LOINC codes, LOINC Users' Guide, or LOINC 
+table, and (2) to Regenstrief if the translation is a derivative work of the 
+RELMA program, LOINC panels and forms file, LOINC hierarchies file, RELMA 
+Users' Manual or RELMA database. Further, user shall fully cooperate with 
+Regenstrief in the filing and reviewing of any copyright applications or other 
+legal documents, and signing any documents (such as declarations, assignments, 
+affidavits, and the like) that are reasonably necessary to the preparation of 
+any such copyright application. The assignment granted by this paragraph 
+extends to all proprietary rights both in the United States, and in all foreign 
+countries.  No other right to create a derivative work of any of the Licensed 
+Materials is hereby granted (except the right to translate into a language 
+other than English granted in this Section 9), and Regenstrief and the LOINC 
+Committee respectively reserve all other rights not specifically granted 
+herein. All such translations shall be electronically transmitted to 
+Regenstrief, and such translations shall be made available and are subject to 
+the same license rights and restrictions contained herein. Regenstrief will 
+give credit on its website (and on screens in RELMA and in its users guides) 
+to the user and/or entity that did the translation.
+
+      10)	The Regenstrief Institute, Inc. and the LOINC Committee welcome 
+requests for new LOINC content (terms, codes or associated material such as 
+text descriptions and synonyms) and suggestions about revisions to existing 
+content within the Licensed Materials.  Any content submitted in conjunction 
+with such a request is subject to the LOINC Submissions Policy, which is 
+available at http://loinc.org/submissions-policy.  
+
+      11)	The names "Regenstrief," "Regenstrief Foundation," "Regenstrief 
+Institute," and "LOINC Committee" may not be used in a way which could be 
+interpreted as an endorsement or a promotion of any product or service 
+without prior written permission of the Regenstrief Institute, Inc. Further, 
+no right to use the trademarks of Regenstrief is licensed hereunder.  To request
+written permission, please contact loinc@regenstrief.org.
+
+      12)	DISCLAIMER:  REGENSTRIEF INSTITUTE, INC. AND THE LOINC 
+COMMITTEE, AS WELL AS ANY CONTRIBUTORS WHO HAVE PROVIDED 
+TRANSLATIONS OF THE LICENSED MATERIALS, DO NOT ACCEPT LIABILITY 
+FOR ANY OMISSIONS OR ERRORS IN THE LICENSED MATERIALS OR ANY 
+OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. 
+AND/OR THE LOINC COMMITTEE.  THE LICENSED MATERIALS AND ALL 
+OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. 
+AND/OR THE LOINC COMMITTEE ARE PROVIDED "AS IS," WITHOUT 
+WARRANTY OF ANY KIND.  ANY EXPRESSED OR IMPLIED WARRANTIES ARE 
+HEREBY DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND 
+FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES ARISING FROM A 
+COURSE OF DEALING, TRADE USAGE, OR TRADE PRACTICE.  FURTHER, NO 
+WARRANTY OR REPRESENTATION IS MADE CONCERNING THE ACCURACY, 
+COMPLETENESS, SEQUENCE, TIMELINESS OR AVAILABILITY OF THE 
+LICENSED MATERIALS OR ANY OTHER MATERIALS OBTAINED FROM 
+REGENSTRIEF INSTITUTE, INC. AND/OR THE LOINC COMMITTEE, OR ANY 
+TRANSLATIONS OR DERIVATIVE WORKS OF ANY OF THE FOREGOING.  IN NO 
+EVENT SHALL REGENSTRIEF INSTITUTE, INC. OR THE LOINC COMMITTEE 
+OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, RELIANCE, OR CONSEQUENTIAL 
+DAMAGES OR ATTORNEYS' FEES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; OPPORTUNITY 
+COSTS; LOSS OF USE, DATA, SAVINGS OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY 
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF 
+THE LICENSED MATERIALS OR ANY OTHER MATERIALS OBTAINED FROM 
+REGENSTRIEF INSTITUTE, INC. AND/OR THE LOINC COMMITTEE, EVEN IF 
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE OR IF SUCH DAMAGES 
+WERE FORESEEABLE. SOME JURISDICTIONS DO NOT ALLOW THE 
+LIMITATION OR EXCLUSION OF CERTAIN WARRANTIES OR CONDITIONS, SO 
+SOME OF THE FOREGOING MAY NOT APPLY TO YOU.
+
+      13)	This license shall be construed and interpreted in accordance with 
+the laws of the State of Indiana, United States of America, excluding its 
+conflicts of law rules.
+
+
+Notice of Third Party Content and Copyright Terms
+
+A small portion of the content of the LOINC table, LOINC panels and forms, 
+LOINC hierarchies, and RELMA database consists of content subject to copyright 
+from third parties. This third party content is either used with permission or 
+under the applicable terms of use. In all such cases, we have included the 
+copyright notice. This third party content is highlighted in the program as 
+follows: When such copyright content appears in the RELMA look-up grid, RELMA 
+will highlight the row containing that content by printing in a different 
+background color and using italics. It will also include a link in the 
+(EXT (C)) column. By clicking on that link, users will get to the copyright 
+notice and to the terms of use for the content of those LOINC-mapped 
+terms. In the case of a LOINC table (e.g. the tab delimited file or the LOINC 
+Access database) we include the copyright notice (up to 250 characters).
+
+We have included third party content that allows use and distribution at least 
+for clinical, administrative and research purposes. The third party copyright 
+owners generally ask for attribution of the source, allow the free use of the 
+content for treatment, health care management, and research purposes. They 
+generally forbid alteration of their content (e.g., survey questions and/or 
+answers) and use for commercial purpose, which usually means the direct sale 
+of the survey instruments, but they often do allow use of their content in 
+commercial software, medical record and other clinical database systems, and 
+the messaging of patient information collected through the use of these 
+instruments.  The details of the notice of copyright for any third party 
+content can be found in association with the terms when using the RELMA 
+look-up tool or the LOINC table. The copyright of the LOINC codes per se 
+remain owned by Regenstrief Institute, Inc. and the LOINC Committee and 
+subject to the LOINC Copyright Notice and License.
+
+In the future, we expect to include many more survey instruments and 
+questionnaires from third parties with permission (especially those required 
+by the U.S. federal government for payment and reimbursement) and believe 
+that cataloguing all of these data collection forms in one comprehensive 
+system (the LOINC table) along with laboratory and other clinical variables 
+will facilitate the use of this data in direct clinical care, research and 
+practice management.
+<----Clip Here for Data----->
+"LOINC_NUM"	"COMPONENT"	"PROPERTY"	"TIME_ASPCT"	"SYSTEM"	"SCALE_TYP"	"METHOD_TYP"	"RELAT_NMS"	"CLASS"	"SOURCE"	"DT_LAST_CH"	"CHNG_TYPE"	"COMMENTS"	"ANSWERLIST"	"STATUS"	"MAP_TO"	"SCOPE"	"CONSUMER_NAME"	"IPCC_UNITS"	"REFERENCE"	"EXACT_CMP_SY"	"MOLAR_MASS"	"CLASSTYPE"	"FORMULA"	"SPECIES"	"EXMPL_ANSWERS"	"ACSSYM"	"BASE_NAME"	"FINAL"	"NAACCR_ID"	"CODE_TABLE"	"SETROOT"	"PANELELEMENTS"	"SURVEY_QUEST_TEXT"	"SURVEY_QUEST_SRC"	"UNITSREQUIRED"	"SUBMITTED_UNITS"	"RELATEDNAMES2"	"SHORTNAME"	"ORDER_OBS"	"CDISC_COMMON_TESTS"	"HL7_FIELD_SUBFIELD_ID"	"EXTERNAL_COPYRIGHT_NOTICE"	"EXAMPLE_UNITS"	"INPC_PERCENTAGE"	"LONG_COMMON_NAME"	"HL7_V2_DATATYPE"	"HL7_V3_DATATYPE"	"CURATED_RANGE_AND_UNITS"	"DOCUMENT_SECTION"	"DEFINITION_DESCRIPTION_HELP"	"EXAMPLE_UCUM_UNITS"	"EXAMPLE_SI_UCUM_UNITS"	"STATUS_REASON"	"STATUS_TEXT"
+"10000-8"	"R wave duration.lead AVR"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-AVR; R wave dur L-AVR; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-AVR"	"Observation"					0	"R wave duration in lead AVR"	"NM"	"PQ"							
+"10001-6"	"R wave duration.lead I"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-I; R wave dur L-I; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-I"	"Observation"					0	"R wave duration in lead I"	"NM"	"PQ"							
+"10002-4"	"R wave duration.lead II"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-II; R wave dur L-II; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; 2; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-II"	"Observation"					0	"R wave duration in lead II"	"NM"	"PQ"							
+"10003-2"	"R wave duration.lead III"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-III; R wave dur L-III; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; 3; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-III"	"Observation"					0	"R wave duration in lead III"	"NM"	"PQ"							
+"10004-0"	"R wave duration.lead V1"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-V1; R wave dur L-V1; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-V1"	"Observation"					0	"R wave duration in lead V1"	"NM"	"PQ"							
+"10005-7"	"R wave duration.lead V2"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-V2; R wave dur L-V2; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-V2"	"Observation"					0	"R wave duration in lead V2"	"NM"	"PQ"							
+"10006-5"	"R wave duration.lead V3"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave dur L-V3; R' wave dur L-V3; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-V3"	"Observation"					0	"R wave duration in lead V3"	"NM"	"PQ"							
+"10007-3"	"R wave duration.lead V4"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-V4; R wave dur L-V4; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-V4"	"Observation"					0	"R wave duration in lead V4"	"NM"	"PQ"							
+"10008-1"	"R wave duration.lead V5"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-V5; R wave dur L-V5; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-V5"	"Observation"					0	"R wave duration in lead V5"	"NM"	"PQ"							
+"1000-9"	"DBG Ab"	"ACnc"	"Pt"	"Ser/Plas^BPU"	"Ord"			"BLDBK"	"FS"	"20020722"	"MAJ"			"ACTIVE"								1						"Y"			0						"Donna Bennett-Goodspeed; Arbitrary concentration; Point in time; Random; SerPl; SerPlas; SerP; Serum; SR; Plasma; Pl; Plsm; Blood product unit; Ql; Ordinal; QL; Qualitative; Qual; Screen; Antibodies; Autoantibody; Antibody; Autoantibodies; Antby; Aby; Anti; BLOOD BANK"	"DBG Ab SerPl BPU Ql"	"Observation"					0	"DBG Ab [Presence] in Serum or Plasma from Blood product unit"									
+"10009-9"	"R wave duration.lead V6"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave dur L-V6; R' wave dur L-V6; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R wave dur L-V6"	"Observation"					0	"R wave duration in lead V6"	"NM"	"PQ"							
+"10010-7"	"R' wave amplitude.lead AVF"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave Amp L-AVF; R' wave Amp L-AVF; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-AVF"	"Observation"					0	"R' wave amplitude in lead AVF"	"NM"	"PQ"							
+"10011-5"	"R' wave amplitude.lead AVL"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave Amp L-AVL; R' wave Amp L-AVL; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-AVL"	"Observation"					0	"R' wave amplitude in lead AVL"	"NM"	"PQ"							
+"10012-3"	"R' wave amplitude.lead AVR"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave Amp L-AVR; R' wave Amp L-AVR; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-AVR"	"Observation"					0	"R' wave amplitude in lead AVR"	"NM"	"PQ"							
+"10013-1"	"R' wave amplitude.lead I"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave Amp L-I; R' wave Amp L-I; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-I"	"Observation"					0	"R' wave amplitude in lead I"	"NM"	"PQ"							
+"10014-9"	"R' wave amplitude.lead II"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave Amp L-II; R wave Amp L-II; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; 2; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-II"	"Observation"					0	"R' wave amplitude in lead II"	"NM"	"PQ"							
+"10015-6"	"R' wave amplitude.lead III"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave Amp L-III; R wave Amp L-III; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; 3; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-III"	"Observation"					0	"R' wave amplitude in lead III"	"NM"	"PQ"							
+"10016-4"	"R' wave amplitude.lead V1"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave Amp L-V1; R' wave Amp L-V1; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-V1"	"Observation"					0	"R' wave amplitude in lead V1"	"NM"	"PQ"							
+"1001-7"	"DBG Ab"	"ACnc"	"Pt"	"Ser/Plas^donor"	"Ord"			"BLDBK"	"FS"	"20020722"	"MAJ"			"ACTIVE"								1						"Y"			0						"Donna Bennett-Goodspeed; Arbitrary concentration; Point in time; Random; SerPl; SerPlas; SerP; Serum; SR; Plasma; Pl; Plsm; Donr; Ql; Ordinal; QL; Qualitative; Qual; Screen; Antibodies; Autoantibody; Antibody; Autoantibodies; Antby; Aby; Anti; BLOOD BANK"	"DBG Ab SerPl Donr Ql"	"Observation"					0	"DBG Ab [Presence] in Serum or Plasma from donor"									
+"10017-2"	"R' wave amplitude.lead V2"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave Amp L-V2; R wave Amp L-V2; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-V2"	"Observation"					0	"R' wave amplitude in lead V2"	"NM"	"PQ"							
+"10018-0"	"R' wave amplitude.lead V3"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave Amp L-V3; R wave Amp L-V3; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-V3"	"Observation"					0	"R' wave amplitude in lead V3"	"NM"	"PQ"							
+"10019-8"	"R' wave amplitude.lead V4"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave Amp L-V4; R' wave Amp L-V4; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-V4"	"Observation"					0	"R' wave amplitude in lead V4"	"NM"	"PQ"							
+"10020-6"	"R' wave amplitude.lead V5"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave Amp L-V5; R' wave Amp L-V5; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-V5"	"Observation"					0	"R' wave amplitude in lead V5"	"NM"	"PQ"							
+"10021-4"	"R' wave amplitude.lead V6"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave Amp L-V6; R' wave Amp L-V6; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave Amp L-V6"	"Observation"					0	"R' wave amplitude in lead V6"	"NM"	"PQ"							
+"10022-2"	"R' wave duration.lead AVF"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave dur L-AVF; R' wave dur L-AVF; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-AVF"	"Observation"					0	"R' wave duration in lead AVF"	"NM"	"PQ"							
+"10023-0"	"R' wave duration.lead AVL"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-AVL; R wave dur L-AVL; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-AVL"	"Observation"					0	"R' wave duration in lead AVL"	"NM"	"PQ"							
+"10024-8"	"R' wave duration.lead AVR"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-AVR; R wave dur L-AVR; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-AVR"	"Observation"					0	"R' wave duration in lead AVR"	"NM"	"PQ"							
+"1002-5"	"DBG Ab"	"ACnc"	"Pt"	"Ser/Plas"	"Ord"		"DONNA BENNETT GOODSBE"	"BLDBK"	"FS"	"20020403"	"MAJ"			"ACTIVE"								1						"Y"			0						"Donna Bennett-Goodspeed; Arbitrary concentration; Point in time; Random; SerPl; SerPlas; SerP; Serum; SR; Plasma; Pl; Plsm; Ql; Ordinal; QL; Qualitative; Qual; Screen; Antibodies; Autoantibody; Antibody; Autoantibodies; Antby; Aby; Anti; BLOOD BANK"	"DBG Ab SerPl Ql"	"Observation"					0	"DBG Ab [Presence] in Serum or Plasma"									
+"10025-5"	"R' wave duration.lead I"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-I; R wave dur L-I; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-I"	"Observation"					0	"R' wave duration in lead I"	"NM"	"PQ"							
+"10026-3"	"R' wave duration.lead II"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-II; R wave dur L-II; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; 2; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-II"	"Observation"					0	"R' wave duration in lead II"	"NM"	"PQ"							
+"10027-1"	"R' wave duration.lead III"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-III; R wave dur L-III; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; 3; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-III"	"Observation"					0	"R' wave duration in lead III"	"NM"	"PQ"							
+"10028-9"	"R' wave duration.lead V1"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-V1; R wave dur L-V1; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-V1"	"Observation"					0	"R' wave duration in lead V1"	"NM"	"PQ"							
+"10029-7"	"R' wave duration.lead V2"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-V2; R wave dur L-V2; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-V2"	"Observation"					0	"R' wave duration in lead V2"	"NM"	"PQ"							
+"10030-5"	"R' wave duration.lead V3"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave dur L-V3; R' wave dur L-V3; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-V3"	"Observation"					0	"R' wave duration in lead V3"	"NM"	"PQ"							
+"10031-3"	"R' wave duration.lead V4"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-V4; R wave dur L-V4; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-V4"	"Observation"					0	"R' wave duration in lead V4"	"NM"	"PQ"							
+"10032-1"	"R' wave duration.lead V5"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R' wave dur L-V5; R wave dur L-V5; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-V5"	"Observation"					0	"R' wave duration in lead V5"	"NM"	"PQ"							
+"1003-3"	"Indirect antiglobulin test.complement specific reagent"	"ACnc"	"Pt"	"Ser/Plas"	"Ord"			"BLDBK"	"SH"	"20000209"	"MIN"			"ACTIVE"								1						"Y"			0						"; IAT Comp-Sp Reag; Ind Coombs; IDC; IAGT; Indirect Coomb; Indirect Coombs; Complmt; Comp; Arbitrary concentration; Point in time; Random; SerPl; SerPlas; SerP; Serum; SR; Plasma; Pl; Plsm; Ql; Ordinal; QL; Qualitative; Qual; Screen; Antiglob; Spec; Indir; BLOOD BANK"	"IAT Comp-Sp Reag SerPl Ql"	"Observation"					1.051316E-03	"Indirect antiglobulin test.complement specific reagent [Presence] in Serum or Plasma"									
+"10033-9"	"R' wave duration.lead V6"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"R prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; R wave dur L-V6; R' wave dur L-V6; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; R prime; Right; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"R' wave dur L-V6"	"Observation"					0	"R' wave duration in lead V6"	"NM"	"PQ"							
+"10034-7"	"S wave amplitude.lead AVF"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave Amp L-AVF; S' wave Amp L-AVF; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-AVF"	"Observation"					0	"S wave amplitude in lead AVF"	"NM"	"PQ"							
+"10035-4"	"S wave amplitude.lead AVL"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-AVL; S wave Amp L-AVL; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-AVL"	"Observation"					0	"S wave amplitude in lead AVL"	"NM"	"PQ"							
+"10036-2"	"S wave amplitude.lead AVR"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-AVR; S wave Amp L-AVR; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-AVR"	"Observation"					0	"S wave amplitude in lead AVR"	"NM"	"PQ"							
+"10037-0"	"S wave amplitude.lead I"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-I; S wave Amp L-I; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-I"	"Observation"					0	"S wave amplitude in lead I"	"NM"	"PQ"							
+"10038-8"	"S wave amplitude.lead II"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-II; S wave Amp L-II; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; 2; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-II"	"Observation"					0	"S wave amplitude in lead II"	"NM"	"PQ"							
+"10039-6"	"S wave amplitude.lead III"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-III; S wave Amp L-III; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; 3; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-III"	"Observation"					0	"S wave amplitude in lead III"	"NM"	"PQ"							
+"10040-4"	"S wave amplitude.lead V1"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-V1; S wave Amp L-V1; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-V1"	"Observation"					0	"S wave amplitude in lead V1"	"NM"	"PQ"							
+"1004-1"	"Direct antiglobulin test.complement specific reagent"	"ACnc"	"Pt"	"RBC"	"Ord"			"BLDBK"	"SH"	"20000209"	"MAJ"			"ACTIVE"								1						"Y"			0						"; DAT Comp-Sp Reag; Direct coombs test; DCT; DAGT; Direct Coomb; Complmt; Comp; Arbitrary concentration; Point in time; Random; Erythrocytes; Red blood corpusles; Red blood cells; Ql; Ordinal; QL; Qualitative; Qual; Screen; Dir; Antiglob; Spec; BLOOD BANK"	"DAT Comp-Sp Reag RBC Ql"	"Both"					0	"Direct antiglobulin test.complement specific reagent [Presence] on Red Blood Cells"									
+"10041-2"	"S wave amplitude.lead V2"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave Amp L-V2; S' wave Amp L-V2; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-V2"	"Observation"					0	"S wave amplitude in lead V2"	"NM"	"PQ"							
+"10042-0"	"S wave amplitude.lead V3"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-V3; S wave Amp L-V3; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-V3"	"Observation"					0	"S wave amplitude in lead V3"	"NM"	"PQ"							
+"10043-8"	"S wave amplitude.lead V4"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-V4; S wave Amp L-V4; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-V4"	"Observation"					0	"S wave amplitude in lead V4"	"NM"	"PQ"							
+"10044-6"	"S wave amplitude.lead V5"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-V5; S wave Amp L-V5; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-V5"	"Observation"					0	"S wave amplitude in lead V5"	"NM"	"PQ"							
+"10045-3"	"S wave amplitude.lead V6"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave Amp L-V6; S' wave Amp L-V6; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave Amp L-V6"	"Observation"					0	"S wave amplitude in lead V6"	"NM"	"PQ"							
+"10046-1"	"S wave duration.lead AVF"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-AVF; S wave dur L-AVF; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-AVF"	"Observation"					0	"S wave duration in lead AVF"	"NM"	"PQ"							
+"10047-9"	"S wave duration.lead AVL"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-AVL; S' wave dur L-AVL; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-AVL"	"Observation"					0	"S wave duration in lead AVL"	"NM"	"PQ"							
+"10048-7"	"S wave duration.lead AVR"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-AVR; S' wave dur L-AVR; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-AVR"	"Observation"					0	"S wave duration in lead AVR"	"NM"	"PQ"							
+"10049-5"	"S wave duration.lead I"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-I; S' wave dur L-I; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-I"	"Observation"					0	"S wave duration in lead I"	"NM"	"PQ"							
+"10050-3"	"S wave duration.lead II"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-II; S wave dur L-II; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; 2; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-II"	"Observation"					0	"S wave duration in lead II"	"NM"	"PQ"							
+"10051-1"	"S wave duration.lead III"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-III; S wave dur L-III; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; 3; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-III"	"Observation"					0	"S wave duration in lead III"	"NM"	"PQ"							
+"10052-9"	"S wave duration.lead V1"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-V1; S' wave dur L-V1; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-V1"	"Observation"					0	"S wave duration in lead V1"	"NM"	"PQ"							
+"10053-7"	"S wave duration.lead V2"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-V2; S wave dur L-V2; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-V2"	"Observation"					0	"S wave duration in lead V2"	"NM"	"PQ"							
+"10054-5"	"S wave duration.lead V3"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-V3; S wave dur L-V3; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-V3"	"Observation"					0	"S wave duration in lead V3"	"NM"	"PQ"							
+"10055-2"	"S wave duration.lead V4"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-V4; S' wave dur L-V4; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-V4"	"Observation"					0	"S wave duration in lead V4"	"NM"	"PQ"							
+"10056-0"	"S wave duration.lead V5"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-V5; S wave dur L-V5; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-V5"	"Observation"					0	"S wave duration in lead V5"	"NM"	"PQ"							
+"10057-8"	"S wave duration.lead V6"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"ECG; Cardiac"	"EKG.MEAS"	"CH"	"20080814"	"MIN"	"Measured from anechoic borders with surrounding retrobulbar fat. All major diameters are virtually identical in length."		"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-V6; S wave dur L-V6; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S wave dur L-V6"	"Observation"					0	"S wave duration in lead V6"	"NM"	"PQ"							
+"1005-8"	"Indirect antiglobulin test.IgG specific reagent"	"ACnc"	"Pt"	"Ser/Plas"	"Ord"			"BLDBK"	"SH"	"20000209"	"MAJ"			"ACTIVE"								1						"Y"			0						"; IAT IgG-Sp Reag; Ind Coombs; IDC; IAGT; Indirect Coomb; Indirect Coombs; Immune globulin G; Immunoglobulin G; Arbitrary concentration; Point in time; Random; SerPl; SerPlas; SerP; Serum; SR; Plasma; Pl; Plsm; Ql; Ordinal; QL; Qualitative; Qual; Screen; Antiglob; Spec; Indir; BLOOD BANK"	"IAT IgG-Sp Reag SerPl Ql"	"Observation"					0	"Indirect antiglobulin test.IgG specific reagent [Presence] in Serum or Plasma"									
+"10058-6"	"S' wave amplitude.lead AVF"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave Amp L-AVF; S' wave Amp L-AVF; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-AVF"	"Observation"					0	"S' wave amplitude in lead AVF"	"NM"	"PQ"							
+"10059-4"	"S' wave amplitude.lead AVL"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-AVL; S wave Amp L-AVL; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-AVL"	"Observation"					0	"S' wave amplitude in lead AVL"	"NM"	"PQ"							
+"10060-2"	"S' wave amplitude.lead AVR"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-AVR; S wave Amp L-AVR; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-AVR"	"Observation"					0	"S' wave amplitude in lead AVR"	"NM"	"PQ"							
+"10061-0"	"S' wave amplitude.lead I"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-I; S wave Amp L-I; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-I"	"Observation"					0	"S' wave amplitude in lead I"	"NM"	"PQ"							
+"10062-8"	"S' wave amplitude.lead II"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-II; S wave Amp L-II; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; 2; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-II"	"Observation"					0	"S' wave amplitude in lead II"	"NM"	"PQ"							
+"10063-6"	"S' wave amplitude.lead III"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-III; S wave Amp L-III; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; 3; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-III"	"Observation"					0	"S' wave amplitude in lead III"	"NM"	"PQ"							
+"10064-4"	"S' wave amplitude.lead V1"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-V1; S wave Amp L-V1; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-V1"	"Observation"					0	"S' wave amplitude in lead V1"	"NM"	"PQ"							
+"10065-1"	"S' wave amplitude.lead V2"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave Amp L-V2; S' wave Amp L-V2; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-V2"	"Observation"					0	"S' wave amplitude in lead V2"	"NM"	"PQ"							
+"1006-6"	"Direct antiglobulin test.IgG specific reagent"	"Imp"	"Pt"	"RBC"	"Nom"			"BLDBK"	"SH"	"20041122"	"NAM"			"ACTIVE"								1						"Y"			0						"Immune globulin G; Immunoglobulin G; DAT IgG-Sp Reag; Direct coombs test; DCT; DAGT; Direct Coomb; Interpretation; Interp; Impression; Impressions; Point in time; Random; Erythrocytes; Red blood corpusles; Red blood cells; Nominal; Dir; Antiglob; Spec; BLOOD BANK"	"DAT IgG-Sp Reag RBC-Imp"	"Observation"					3.359404E-04	"Direct antiglobulin test.IgG specific reagent [interpretation] on Red Blood Cells"									
+"10066-9"	"S' wave amplitude.lead V3"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-V3; S wave Amp L-V3; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-V3"	"Observation"					0	"S' wave amplitude in lead V3"	"NM"	"PQ"							
+"10067-7"	"S' wave amplitude.lead V4"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-V4; S wave Amp L-V4; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-V4"	"Observation"					0	"S' wave amplitude in lead V4"	"NM"	"PQ"							
+"10068-5"	"S' wave amplitude.lead V5"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave Amp L-V5; S wave Amp L-V5; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-V5"	"Observation"					0	"S' wave amplitude in lead V5"	"NM"	"PQ"							
+"10069-3"	"S' wave amplitude.lead V6"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime amplitude; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave Amp L-V6; S' wave Amp L-V6; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave Amp L-V6"	"Observation"					0	"S' wave amplitude in lead V6"	"NM"	"PQ"							
+"10070-1"	"S' wave duration.lead AVF"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-AVF; S wave dur L-AVF; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-AVF"	"Observation"					0	"S' wave duration in lead AVF"	"NM"	"PQ"							
+"10071-9"	"S' wave duration.lead AVL"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-AVL; S' wave dur L-AVL; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-AVL"	"Observation"					0	"S' wave duration in lead AVL"	"NM"	"PQ"							
+"10072-7"	"S' wave duration.lead AVR"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-AVR; S' wave dur L-AVR; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-AVR"	"Observation"					0	"S' wave duration in lead AVR"	"NM"	"PQ"							
+"10073-5"	"S' wave duration.lead I"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-I; S' wave dur L-I; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-I"	"Observation"					0	"S' wave duration in lead I"	"NM"	"PQ"							
+"1007-4"	"Direct antiglobulin test.poly specific reagent"	"ACnc"	"Pt"	"RBC"	"Ord"		"DIRECT ANTIGLOBULIN TEST.NON SPECIFIC REAGENT"	"BLDBK"	"SH"	"20000209"	"NAM"	"Polyspecific (nonspecific) reagent detects both complement and IgG bound"		"ACTIVE"								1						"Y"			0						"; DAT Poly-Sp Reag; Direct antiglobulin test.non specific reagent; Direct coombs test; DCT; DAGT; Direct Coomb; Arbitrary concentration; Point in time; Random; Erythrocytes; Red blood corpusles; Red blood cells; Ql; Ordinal; QL; Qualitative; Qual; Screen; Dir; Antiglob; Spec; BLOOD BANK"	"DAT Poly-Sp Reag RBC Ql"	"Both"					0	"Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells"									
+"10074-3"	"S' wave duration.lead II"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-II; S wave dur L-II; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; 2; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-II"	"Observation"					0	"S' wave duration in lead II"	"NM"	"PQ"							
+"10075-0"	"S' wave duration.lead III"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-III; S wave dur L-III; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; 3; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-III"	"Observation"					0	"S' wave duration in lead III"	"NM"	"PQ"							
+"10076-8"	"S' wave duration.lead V1"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-V1; S' wave dur L-V1; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-V1"	"Observation"					0	"S' wave duration in lead V1"	"NM"	"PQ"							
+"10077-6"	"S' wave duration.lead V2"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-V2; S wave dur L-V2; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-V2"	"Observation"					0	"S' wave duration in lead V2"	"NM"	"PQ"							
+"10078-4"	"S' wave duration.lead V3"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-V3; S wave dur L-V3; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-V3"	"Observation"					0	"S' wave duration in lead V3"	"NM"	"PQ"							
+"10079-2"	"S' wave duration.lead V4"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S wave dur L-V4; S' wave dur L-V4; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-V4"	"Observation"					0	"S' wave duration in lead V4"	"NM"	"PQ"							
+"100-8"	"Cefoperazone"	"Susc"	"Pt"	"Isolate"	"OrdQn"	"MIC"	"CEFOBID"	"ABXBACT"	"SH"	"20061026"	"MAJ"			"ACTIVE"								1						"Y"			0						"Cefobid; Susceptibility; Susceptibilty; Sus; Suscept; Susceptibilities; Point in time; Random; Islt; Isol; Minimum inhibitory concentration; ANTIBIOTIC SUSCEPTIBILITIES"	"Cefoperazone Islt MIC"	"Observation"					0	"Cefoperazone [Susceptibility] by Minimum inhibitory concentration (MIC)"									
+"10080-0"	"S' wave duration.lead V5"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-V5; S wave dur L-V5; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-V5"	"Observation"					0	"S' wave duration in lead V5"	"NM"	"PQ"							
+"10081-8"	"S' wave duration.lead V6"	"Time"	"Pt"	"Heart"	"Qn"	"EKG"	"S prime duration; ECG; Cardiac"	"EKG.MEAS"	"CH"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; S' wave dur L-V6; S wave dur L-V6; PB; Durat; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; S prime; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"S' wave dur L-V6"	"Observation"					0	"S' wave duration in lead V6"	"NM"	"PQ"							
+"1008-2"	"Indirect antiglobulin test.poly specific reagent"	"ACnc"	"Pt"	"Ser/Plas"	"Ord"			"BLDBK"	"SH"	"20000209"	"NAM"	"Polyspecific (nonspecific) reagent detects both complement and IgG bound"		"ACTIVE"								1						"Y"			0						"; IAT Poly-Sp Reag; Ind Coombs; IDC; IAGT; Indirect Coomb; Indirect Coombs; Arbitrary concentration; Point in time; Random; SerPl; SerPlas; SerP; Serum; SR; Plasma; Pl; Plsm; Ql; Ordinal; QL; Qualitative; Qual; Screen; Antiglob; Spec; Indir; BLOOD BANK"	"IAT Poly-Sp Reag SerPl Ql"	"Observation"					0	"Indirect antiglobulin test.poly specific reagent [Presence] in Serum or Plasma"									
+"10082-6"	"ST initial amplitude 6 ms.lead AVF"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-AVF; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-AVF"	"Observation"					0	"ST initial amplitude 6 ms in lead AVF"	"NM"	"PQ"							
+"10083-4"	"ST initial amplitude 6 ms.lead AVL"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-AVL; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-AVL"	"Observation"					0	"ST initial amplitude 6 ms in lead AVL"	"NM"	"PQ"							
+"10084-2"	"ST initial amplitude 6 ms.lead AVR"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-AVR; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-AVR"	"Observation"					0	"ST initial amplitude 6 ms in lead AVR"	"NM"	"PQ"							
+"10085-9"	"ST initial amplitude 6 ms.lead I"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-I; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-I"	"Observation"					0	"ST initial amplitude 6 ms in lead I"	"NM"	"PQ"							
+"10086-7"	"ST initial amplitude 6 ms.lead II"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-II; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; 2; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-II"	"Observation"					0	"ST initial amplitude 6 ms in lead II"	"NM"	"PQ"							
+"10087-5"	"ST initial amplitude 6 ms.lead III"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-III; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; 3; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-III"	"Observation"					0	"ST initial amplitude 6 ms in lead III"	"NM"	"PQ"							
+"10088-3"	"ST initial amplitude 6 ms.lead V1"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"20090126"	"DEL"			"DEPRECATED"	"45966-9"							2						"Y"			0				"Y"		"; ST I-Amp 6ms L-V1; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"Deprecated ST initial amp 6 ms.lead"	"Observation"					0	"Deprecated  ST initial amplitude 6 ms.lead V1"	"NM"	"PQ"							
+"10089-1"	"ST initial amplitude 6 ms.lead V2"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-V2; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-V2"	"Observation"					0	"ST initial amplitude 6 ms in lead V2"	"NM"	"PQ"							
+"1009-0"	"Direct antiglobulin test.poly specific reagent"	"ACnc"	"Pt"	"RBC"	"Ord"		"DIRECT ANTIGLOBULIN TEST.NON SPECIFIC REAGENT"	"BLDBK"	"SH"	"20000209"	"DEL"			"DEPRECATED"	"1007-4"							1						"Y"			0						"; DAT Poly-Sp Reag; Direct antiglobulin test.non specific reagent; Direct coombs test; DCT; DAGT; Direct Coomb; Arbitrary concentration; Point in time; Random; Erythrocytes; Red blood corpusles; Red blood cells; Ql; Ordinal; QL; Qualitative; Qual; Screen; Dir; Antiglob; Spec; BLOOD BANK"	"Deprecated DAT Poly-Sp Reag RBC Ql"						0	"Deprecated Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells"									
+"10090-9"	"ST initial amplitude 6 ms.lead V3"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-V3; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-V3"	"Observation"					0	"ST initial amplitude 6 ms in lead V3"	"NM"	"PQ"							
+"10091-7"	"ST initial amplitude 6 ms.lead V4"	"Elpot"	"Pt"	"Heart"	"Qn"	"EKG"		"EKG.MEAS"	"CC"	"19980820"	"NAM"			"ACTIVE"								2						"Y"			0				"Y"		"; ST I-Amp 6ms L-V4; PB; Electrical potential; Voltage; Point in time; Random; Hrt; Cardiac; Quantitative; QNT; Quant; Quan; Electrocardiogram; Electrocardiograph; ECG; EKG.MEASUREMENTS; EKG.MEASUREMENTS"	"ST I-Amp 6ms L-V4"	"Observation"					0	"ST initial amplitude 6 ms in lead V4"	"NM"	"PQ"							
+EOFdNk.ya8c5d

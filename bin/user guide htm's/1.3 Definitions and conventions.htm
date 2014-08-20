@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="oochis manual.css">
+</head>
+<body>
+<h2 id="sectionHeader">1.3 Definitions and conventions:</h2>
+<p>
+<ul>
+   <li>OOCHIS Object-Oriented Community Health Information System. OOCHIS is the general standard health information system architecture that stems from how the newer health information technologies (are meant to) fit together (see list below). OOCHIS is not a single program or application, though it is modeled in a single diagram. The major component is an object-oriented Electronic Health Record (EHR) solution. Object-oriented means every medical object (or, &quotconcept&quot) is in medical English (used as an exhaustible knowable ontology).</li>
+   <li>Community means it is controlled by the public (GPL3) and uses a collaboratively controlled public process to guide it's evolution. Open source means it is free; and the business uses human volunteers, professional or otherwise. Health Information System (HIS) means the entirety of health care providing technologies used by any provider (individual or group):
+   <ol>
+      <li>The Internet</li>
+      <li>Common vocabularies for data exchange between between medical applications</li>
+      <li>Standard computer processors (such as x86, x64, ARM7, SPARC)</li>
+      <li>Object-oriented language</li>
+   </ol>
+   <li>Item: Encoded item; an electronic health record entry that intrinsically includes all available vocabulary-specified attributed data. Item may also refer to the medical code content of a vocabulary term regardless of whether there is an entry (no data may be information, as in the absence of a patient's entered middle name that subsequently identifies a patient).</li>
+   <li>Encoded: Defined; Encoded data means it has a description, and a unique identifier, or, &quotcode.&quot</li>
+   <li>Coded: An entry may be coded, yet contain no (otherwise encoded) data.</li>
+   <li>Template item: An item on a medical form displaying the encoded description and a data-entry area for a record found in a vocabulary meta-thesaurus.</li>
+   <li>Portable: standard communicable forms (presentation as well as the content [it's printable, email-able).</li>
+   <li>Front-end: front end visible data, results of calculations and content.</li>
+   <li>Clinician: A physician, nurse, or allied health worker.</li>
+   <li>Back-end: usually not visible, includes every detail.</li>
+   <li>User account: Any account that logs in—the system administrators and users authorized with and without administrator privileges.</li>
+   <li>Order-entry: Computerized physician order-entry.</li>
+   <li>URI (Uniform Resource Identifier). An electronic location such as, &quotC:\Program Files.&quot &quotURL,&quot is no longer recommended by the World Wide Web Consortium.</li>
+   <li>Business object: Agreed-upon formal definitions of things (a software window; a patient index, a medical order, an appointment schedule, a criteria to be met).</li>
+   <li>Directory: &quotDirectory,&quot is used by some operating systems, &quotfolder,&quot by others. A directory may contain files or further directories. A directory must have a URI.</li>
+   <li>Health Information System (HIS): For practical purposes HIS refers to any complete computerized network of health information programs.</li>
+   <li>Electronic Health Record (EHR) solution: the primary computer program (component framework) that clinicians use to record and manage patient health information. The EHR solution is, physically, a component of the global health information system (see fig 1). The sub-network within the GHIS that the EHR exchanges data with is the Community Health</li>
+   <li>Information Network (CHIS). Other components in the CHIS paradigm include claims software, Internet resources, prescription clearing houses, and custom order-entry systems.</li>
+   <li>Nonetheless, as the primary user interface to (component-framework for) health information, complete EHR solutions are expected to read and exchange health data with other software; for example, to synchronize orders between claims software and order-entry systems. Semantically, all of a patient's health information on is recorded in his or her EHR. Pragmatically, the EHR is accessible by the EHR solution.</li>
+</ul>
+Content headings surrounded by 'single quotations' name Oochis EHR objects (such as windows, panels, and buttons).
+<br><br>
+All clinical concepts (board room business objects) are nested in a natural hierarchy in Oochis EHR. Broad medical concepts (such as, 'System') are named by, and contained in, Oochis EHR's six main windows. The concepts (and window names) are: 'Access', 'System', 'Charting', 'Messaging', 'Decision Support', and 'Practice'). Each window's main buttons describe primary clinical concepts (such as 'User accounts' in the 'System' window). All other subsequently nested objects are features (such as the 'User index' in 'User accounts'). Every medical IT concept belongs in at least one of the six broad concepts. The structure of the content section reflects the structure of objects in Oochis EHR. For example, &quotFont,&quot in the contents section is listed as:
+<br><br>
+&nbsp&nbsp&nbsp-System (window-frame) .............................[page num]<br>
+&nbsp&nbsp&nbsp...<br>
+&nbsp&nbsp&nbsp...<br>
+&nbsp&nbsp&nbsp-Appearance ........................................[page num]<br>
+&nbsp&nbsp&nbsp...<br>
+&nbsp&nbsp&nbsp...<br>
+&nbsp&nbsp&nbsp-Font<br>
+&nbsp&nbsp&nbsp....................................................[page num]<br>
+And going to 'Font' we find:<br>
+'Font' ('System' &#8594 'Appearance' &#8594 'Font') :<br>
+Thusly, to adjust Oochis EHR's 'Font', click on 'System', then 'Appearance', then 'Font'.<br>
+</p>
+</body>
+</html>

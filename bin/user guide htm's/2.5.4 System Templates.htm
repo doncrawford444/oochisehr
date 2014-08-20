@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="oochis manual.css">
+</head>
+<body>
+<h2 id="sectionHeader">2.5.4 Templates</h2>
+<p id="indentedParagraph">
+<font color="#8B0000">'Templates'</font> ('System' &#8594 'Templates'):<br>
+'Templates' creates medical forms to display chart information on printable, provider-created medical forms. Template pages do not contain any EHR data, they are copied into medical forms and used in health record charts. The saved EHR data does not contain information on how it's displayed. Importing EHR data from other providers, means automatically filling in the fields of provider-created medical forms. All chart data are contained in chart detail pages regardless of whether-or-not their is a correlated area on any provider-created medical form.
+<br><br>
+Creating templates:
+<br>
+The sections below follow the order of objects in the 'Templates' panel from left-to-right and top-to-bottom. Completed in-order, they serve as the general instructions for creating a template and an item.
+<br><br>
+The process of adding an item proceeds with indicating the item's template location, then the medical code, and finally, the appearance of the entry item:
+<br><br>
+The default description used to label a demographic or insurance item can be changed from the default value stored with each medical code. This information is internal to the user's template, and saved as an attribute of the template only.
+<br><br>
+To indicate the item's template location, indicate and or open a chart number,
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'New/open'</font> ('System' &#8594 'Templates' &#8594 'New/open' ):<br>
+Selects a new or existing template. To create a new template, specify the name of the new template and press the 'Enter' key or click, 'Ok'. To choose an existing template, select (click) a (previously created) template from the displayed list.
+<br><br>
+Alternatively, dropping a 'Chart' on the 'System' 'Templates' panel causes the chart's template to open for editing (as a new template, not a new chart). Regardless, the chart's own template will never change until you first specify 'Change template' on an open chart from the title bar of the the 'Charting' window.
+<br><br>
+When a template is opened, a manila chart folder without any pages will presented to the right of the window.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Chart section'</font> ('System' &#8594 'Templates' &#8594 'Chart section' ):<br>
+Select the desired chart section ('Demographic', 'Insurance', or the 'Chart cover') to work with. Pages in the 'History' and 'Activities' sections are created in a chart (in an open chart in the 'Charting' window).
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Page'</font> ('System' &#8594 'Templates' &#8594 'Page' ):<br>
+If it's a new template, the first page will be displayed. Otherwise select from the drop down list of pages, or enter an existing page number, then press the 'Enter' key.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Item number'</font> ('System' &#8594 'Templates' &#8594 'Item number' ):<br>
+The 'Item number' is the number of the selected or adding item. If the page is new, item number 1 will be displayed. If the page is an existing page, the number of the next item to be added is displayed. To select a different item, enter the number of an existing page item.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Code set'</font> ('System' &#8594 'Templates' &#8594 'Code set' ):<br>
+Code sets are the vocabulary meta-thesauri used to identify items. Select from code sets encoding demographic and insurance information. Popular code sets used for CPOE orders and reporting of lab results are not pertinent to demographic and insurance recording, and are thusly, not displayed.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Replace item'</font> ('System' &#8594 'Templates' &#8594 'Replace item' ):<br>
+Replacing an item removes the item from the template page and adds the item back to the template panel for modification and subsequent re-adding. The new item must be the same size or smaller than the item it replaces. Attributes that effect the size of the item are: margins; character size; border; and the label's orientation all effect the size of the item.
+<br><br>
+For example, to change the spelling of an encoded item's input field, first click on the template item to bring it in the Template panel, then respell the label in the label field, and reduce the size of the expected input field characters until the item fits.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Data type'</font> ('System' &#8594 'Templates' &#8594 ' Data type ' ):<br>
+When the user enters a standard, 'Code set', the, 'Code set's data type is automatically associated with the item. If the 'Code set' (see 'System' &#8594 'Templates' &#8594 'Code set') is a special in-house custom vocabulary, is undetermined, or the item is to be encoded later (bad idea), the expected 'Data type' can be specified by the user as: 'Text'; 'Image'; 'Audio'; or 'Video.' Data entered into a field (typed or otherwise created, objects dropped and pasted) are encapsulated as objects and stored as encoded health record information regardless of the specified 'Data type'. Also, the template displays the item's page boundaries differently for each data type (see figure).
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Medical code'</font> ('System' &#8594 'Templates' &#8594 'Medical code' ):<br>
+The 'Medical code' is a unique identifier for a list of things to record with an order-entry. These lists are uniquely identified along with their identifying medical code or, &quotcode,&quot in meta-thesauri like HL-7; CPT; LOINC; RXNORM; and ICD. Encoded order-entries are a means to conveniently record and retrieve health information, as well as provide the data for tools in health information technology. Enter a 'Medical code' (such as &quot00110&quot for HL-7's &quotDate/Time of Birth&quot) in the field immediately above the 'Medical code' button. Alternatively, clicking, 'Medical code' causes a search dialog panel to be displayed for the selected 'Code set' vocabulary.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Item label (default is the field or subcomponent name plus &quot : &quot )'</font> ('System' &#8594 'Templates' &#8594 'Item label (default is the field or subcomponent name plus &quot : &quot )'):<br>
+The item's label prompts for user-input and then stays on the form to describe the input. The medical code's description is entered by default, but may be changed as per practice policy. The item's label is specific to the template and medical forms created from the template, but any data entered into the items is not recorded as encoded EHR data, but is still put in the EHR. This is an internal to the user's template and the medical forms created from the template.
+<br><br>
+If the medical label is from a custom provider vocabulary or the item is to be uncoded ,
+<br><br>
+The label describes data that it is not anywhere else. In other words, the code for the patient name is not
+found anywhere else in the record. So long as the system-wide and backwards-compatible standard
+vocabularies are in use, standards HL-7 for demographics and insurance, and other codes (see code use
+matrix)...
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Include item numbers'</font> ('System' &#8594 'Templates' &#8594 'Include item numbers'):<br>
+Click to 'Include item numbers' on the page. Item numbers are part of the provider's medical forms, and are not recorded as EHR data. The purpose of item numbers is to indicate the order of items on a provider's medical form.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Prompt user to fill entry: '</font> ('System' &#8594 'Templates' &#8594 'Prompt user to fill entry: '):<br>
+Optional: When yes, the background of the adding item will be pink until it has input. If the entry does not have input when a chart is requested to be closed, the item will flash momentarily and the talk-back will indicate &quot&quot.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Yes'</font> ('System' &#8594 'Templates' &#8594 'Prompt user to fill entry: ' &#8594 'Yes'):<br>
+Selects 'Prompt(ing) the user to fill (the) entry' before closing the chart.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'No'</font> ('System' &#8594 'Templates' &#8594 'Prompt user to fill entry: ' &#8594 'No'):<br>
+De-selects 'Prompt(ing) the user to fill (the) entry' before closing the chart.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Box-border'</font> ('System' &#8594 'Templates' &#8594 'Box-border: '):<br>
+Encloses the item in a box using a line border. Good for grouping entries together into customary stacks of box-like entry fields.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Yes'</font>('System' &#8594 'Templates' &#8594 'Box-border: ' &#8594 'Yes'):<br>
+Selects 'Yes' that the item have a boxed border (or &quotline border&quot). The item is displayed enclosed in a box.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'No'</font>('System' &#8594 'Templates' &#8594 'Box-border: ' &#8594 'No'):<br>
+Selects 'No' that the item will not have a boxed border (or &quotline border&quot). The displayed item will have no border.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Item label orientation: '</font> ('System' &#8594 'Templates' &#8594 'Item label orientation: '):<br>
+The item's descriptive label is positioned above (the 'Top-bottom' orientation), or to-the-left of (the 'Left-right' orientation) the content (see figure of an item with life-right and top-bottom side by side on the figure's panel).
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Left-right: '</font> ('System' &#8594 'Templates' &#8594 'Item label orientation: ' &#8594 'Left-right'):<br>
+Selects the 'Left-right' orientation for the item's label and content relative to each other. Click to position the item's label to the left of the content.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Top-bottom: '</font> ('System' &#8594 'Templates' &#8594 'Item label orientation: ' &#8594 'Top-bottom'):<br>
+Selects the top-bottom orientation of the item's label and content relative to each other. Click to position the item's label above the content. Using a 'Boxed-border' may more easily define the boundaries of items labeled using the 'Top-bottom' orientation.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Font size: '</font> ('System' &#8594 'Templates' &#8594 'Font size: '):<br>
+Specify the item's font size. Font applies to all text associated with the medical entry including the label and entry field. Font size can be adjusted from 10 to 22 font-point sizes.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Font type: '</font> ('System' &#8594 'Templates' &#8594 'Font type: '):<br>
+Specify the item's font type. Font applies to all text associated with the item, including the label and content. Font type choices are constrained to three font choices commonly used in medicine: 'Ariel', 'Serif', or 'Electron'.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Ariel: '</font> ('System' &#8594 'Templates' &#8594 'Font type: ' &#8594 'Ariel'):<br>
+Clicking this radio button changes the item's font to 'Ariel'.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Serif: '</font> ('System' &#8594 'Templates' &#8594 'Font type: ' &#8594 'Serif'):<br>
+Clicking this radio button changes the item's font to 'Serif'.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Serif: '</font> ('System' &#8594 'Templates' &#8594 'Font type: ' &#8594 'Electron'):<br>
+Clicking this radio button changes the item's font to 'Electron'.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Margins (in pixels): '</font> ('System' &#8594 'Templates ' &#8594 'Margins (in pixels): ') :<br>
+The margined area is a part of the item and cannot be fitted into another item's area.
+<br>
+{figure of margined template item}
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Left: '</font> ('System' &#8594 'Templates ' &#8594 'Margins (in pixels): ' &#8594 'Left: ') :<br>
+Enter the number of pixels to add as the item's (invisible) left margin. The left margin causes the item to be placed to the right, &quotx,&quot number of pixels.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Right: '</font> ('System' &#8594 'Templates ' &#8594 'Margins (in pixels): ' &#8594 'Right: ') :<br>
+Enter the number of pixels to add as the item's (invisible) right margin. The left margin causes the item to be placed to the right, &quotx,&quot number of pixels.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Top: '</font> ('System' &#8594 'Templates ' &#8594 'Margins (in pixels): ' &#8594 'Top: ') :<br>
+Enter the number of pixels to add as the item's (invisible) left margin. The left margin causes the item to be placed to the right, &quotx,&quot number of pixels.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Input-field character size: '</font> ('System' &#8594 'Templates' &#8594 'Input-field character size: '):<br>
+If the item's medical code specifies text input (if the item's data type is text), enter the number of characters expected for the input. This sizes the entry fields accordingly. To align fields vertically, (stacked on top of each other with ends flush together), make the input-field's character-size so that the adding item is smaller than the item being aligned with, then select, 'Align with top'.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Align with top: '</font> ('System' &#8594 'Templates' &#8594 'Align with top'):<br>
+If room allows, the adding item is widened to fit under the item immediately above.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Add'</font> ('System' &#8594 'Templates' &#8594 'Add'):<br>
+Adds the item to the page. The cursor must be set (blinking) on the page in order to position the adding item. The cursor is only able to be set to the side of items existing on the page. The item may be finely moved to any one side using the arrow keys.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Delete item'</font> ('System' &#8594 'Templates' &#8594 'Delete item'):<br>
+Deletes the item. Item numbers are automatically adjusted. Items numbered higher than the deleted item are reduced by reduced by one.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Delete template'</font> ('System' &#8594 'Templates' &#8594 'Delete template'):<br>
+Deletes the open template. A dialog panel will appear warning that deleting a template is permanent and the template cannot be recovered.
+</p><p id="indentedParagraph20px">
+<font color="#8B0000">'Save as'</font> ('System' &#8594 'Templates' &#8594 'Save as'):<br>
+Every change to an open template is saved to that template. However, to save a template under a different name, click 'Save as (a different named file)', then enter the new (saved) template name and click 'OK' or press the 'Enter' key.
+</p>
+</body>
+</html>

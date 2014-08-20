@@ -1,0 +1,7 @@
+<----Clip Here for Data----->
+element	V23datatype	field_name	table	description
+00110	TS	Date/Time of Birth		
+00111	IS	Sex	0001	
+00108	XPN	Patient Name		Standard format, see HL7 Chapter 2-9.8 (PN Person name)
+00113	IS	Race	0005	ERISA also has a published list of ethnic classifications which may be used by local agreement at a site.
+EOFdNk.ya8c5d

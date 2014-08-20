@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="oochis manual.css">
+</head>
+<body>
+<h2 id="sectionHeader">1.7 Introduction</h2>
+<p>
+Oochis EHR focuses medical work flow through six main windows. Each main window is named after the category of features it contains:
+<br>
+<ul>
+   <li>'Login,' controls access.</li>
+   <li>'System', handles system settings, accounts, appearance, and chart templates.</li>
+   <li>'Charting' handles charting on a virtual plain manila chart.</li>
+   <li>'Messaging', handles alerts, contacts, emails, and texts.</li>
+   <li>'Decision Support' contains medical informatics tools.</li>
+   <li>'Practice Assistant'. Provides patient lists, reports, lists of medical codes, performs scheduling, and integrates with billing software.</li>
+</ul>
+Except for the pragmatic inclusion of emerging decision support tools, everything in Oochis EHR's design is dogmatic, including the user experience and logic in the source code. This is to prevent unintended consequences while reducing human errors through automation.
+<br><br>
+One of the greatest promises of the CHIS/EHR paradigm is development, implementation, and innovation of decision support diagnostic tools (such as a component for translational medicine ['Translational Medicine'] or an artificially intelligent diagnostic agent [IBM's Watson]]). Oochis EHR imbibes straightforward technical solutions with familiar medical objects, yet provides for advanced decision support tools and associated heuristics (such as processing rules [see 'Rules']).
+<br><br>
+The aim of Oochis EHR is to aesthetically automate medical processes, provide and develop decision support tools, and provide for the straightforward customization of medical technology by users. EHR's should be able to be customized in near-real time rather than consuming the energy of an implementation project or the resources or service contracts (see, &quotMedical business object processing guideline&quot).
+<br><br>
+The work flow during Oochis EHR user sessions is heavily parallel; six main windows focus multitasking and comprehension of patient information. All familiar medical objects are available to perform any desired work. Practically any function (searching a patient index, filling a medical order, printing an appointment schedule) is able to be performed at any time. Work in the OOCHIS framework is an intuitive experience.
+<br>
+</p>
+<img id="figure" height="320" width="785" src="images/divergence.jpg" alt="Divergence into 6 main classes">
+<br>
+<br>
+<table id="noBorders">
+   <tr id="noBorders">
+      <th id="noBorders" colspan="2">Table. Time-line of information technology changes in health care.</th>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders"align="center">1960: </td>
+      <td id="noBorders">Federal budget outlays = 629 B. Annual U.S. health care expenditure is 187 B.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">Stone-age to 1961: </td>
+      <td id="noBorders">Innovation of basic computer hardware and softwares (from rocks to transistors). Closed, proprietary systems and solutions were being experimented with and advanced (from counting sheep on clay tablets to developing instruction sets for these new electrical circuits).</td>
+   </tr>
+   <tr>
+      <td  id="noBorders" align="center">1970: </td>
+      <td id="noBorders">Federal budget outlays = 983 B. Annual U.S. health care expenditure is 376 B.</td>
+   </tr>
+   <tr>
+      <td id="noBorders" align="center">1970: </td>
+      <td id="noBorders">Closed, proprietary mainframe computers. Programming circuits on a workstation, rather than a main frame becomes the norm. Academics booms, advanced infusion of technological preparedness is rampant.</td>
+   </tr>
+   <tr>
+      <td id="noBorders" align="center">1980: </td>
+      <td id="noBorders">Federal budget outlays = 1,369 B. Annual U.S. health care expenditure is 592 B.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">1980: </td>
+      <td id="noBorders">Continued academic training of Information technology. Application of networks of loosely coupled (federated) proprietary mainframe computer systems.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">1990: </td>
+      <td id="noBorders">Federal budget outlays = 1,832 B. Annual U.S. health care expenditure is 1,059 B.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">1990: </td>
+      <td id="noBorders">Distributed (networked) applications using data warehouses and DS systems.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">1961 to 1996: </td>
+      <td id="noBorders">Continued rapid development of computers and computer information systems. Industrial and complex fields were incorporating complex systems technology system-wide much faster than the medical field.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">1996: </td>
+      <td id="noBorders">Congress passed HIPPA.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">2000: </td>
+      <td id="noBorders">Federal budget outlays = 2,041 B. Annual U.S. health care expenditure is 1,571 B.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">2004: </td>
+      <td id="noBorders">Object oriented programming became the dominant programmatic language in health care.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">1996 - 2013: </td>
+      <td id="noBorders">Adoption of standard medical code sets across all health systems. Object-orientation is now the De-facto standard medical programming syntax.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">2010: </td>
+      <td id="noBorders">Federal budget outlays = 3,067 B. Annual U.S. health care expenditure is 2,930 B.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">2014: </td>
+      <td id="noBorders">Federal budget outlays = 3,770 B. Annual U.S. health care expenditure is 3,800 B.</td>
+   </tr>
+   <tr id="noBorders">
+      <td id="noBorders" align="center">2014: </td>
+      <td id="noBorders">Innovation of implemented advanced decision support tools: translational medicine (Oochis EHR's translational medicine component), complex -omics based therapies (Austin TX), AI diagnostic agents (IBM), risk management (federated treatment guidelines, advanced outbreak warnings), and pro-active medicine that factors in mortality changes caused by replacement organs modern (and advancing) treatments on our actuarial life expectancies. EHR solutions started being certified in 2010 by the NCO (Office of the National Coordinator for Health Information Technology, Department of Health and Human Services). Aided by standardization of technologies and governmental incentives, the adoption rate of EHR solutions passed the 50% mark in 2013. Prior to the emergence of EHR solutions, paper-based recording was predominant in primary care and a combination of paper-based and closed proprietary computer-based recording was predominant in secondary and tertiary care.</td>
+   </tr>
+</table>
+<p>
+<br>
+Current system-wide trends:
+<br>
+<ul>
+   <li>Continued innovation of the OOCHIS framework and it's components to improve access of needed medical information using state-of-the-art tools.</li>
+   <li>Movement to empower patients with their health records.</li>
+   <li>Continuing recognition of the EHR as the base unit of health record information. EHR data are recorded and stored by health care providers and accessed through patient name servers. Viewed remotely, no EHR data is duplicated in permanent memory (secure, redundant storage notwithstanding).</li>
+   <li>With aggressive system-wide standardization in computer software and protocols comes a change in the way networks are described. An, &quotEHR solution,&quot is, precisely, a formal software component framework, whereas a practice's entire health information system is an informal component framework that includes hardware as well as other softwares, integrated and otherwise.</li>
+</ul>
+</p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="oochis manual.css">
+</head>
+<body>
+<h2 id="sectionHeader">3.4 Medical business object processing guideline</h2>
+<p>
+This section describes how to process general practice computerized medical business objects.
+<br><br>
+The OOCHIS has three primary knowledge domains (institutional interests): patient-focused (health care perspective), aggregate outcomes focus (social and administrative institutions), and science-and-education focused (medical schools and journaling).
+<br><br>
+Knowledge of what domain the data is sought in, as well as needed for calculating, are used to help locate precisely where in the source code the needed data are processed, in order that it may be edited.
+<br><br>
+In evaluating requirments, compare the logic in the formal requirements to the the logic in the source using psuedo-code in-between: formal requirement ≈ psuedo-code ≈ source code.
+<br><br>
+In projects or tasks that perform work on one or more business object (such as implementations of rules and regulations), create each of the following in sequence: the formal requirement, the psuedo-code, the source code, then implement the changes.
+<br><br>
+An example: in a board room meeting, a suggestion is made to make an EHR interface full screen. The minutes of the meeting record, establishing the formal &quotbusiness object&quot in the meeting:
+<br><br>
+&quotAllow full screen support: If the default screen device supports full screen presentations, and the full screen option is selected, set the screen to full screen.&quot
+<br><br>
+Then transliterate the business object into modeling (pseudo code) and software business objects (source code) using the following examples:
+<br><br>
+<ul>
+   <li>Formal requirement:<br>
+&quotImplement full-screen support: If the default screen device supports full-screen presentations, and the full screen option is selected, set the screen to, &quotfull screen.&quot</li>
+   <li>Psuedo-code for the method named, &quotsetFrame,&quot in the file named, &quot Device:&quot<br>
+If the device is full-screen supported, set the full-screen window.</li>
+   <li>Source-code for the method named, &quotsetFrame,&quot in the file named, &quotDevice:&quot<br>
+if (graphicsDevice.isFullScreenSupported() && (fullscreen != false)) {<br>
+&nbsp&nbsp&nbspsetUndecorated(true);<br>
+&nbsp&nbsp&nbspGraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().setFullScreenWindow(this);<br>
+}</li>
+</ul>
+All-together these business objects, their source code, their binary electronic instruction sets (binary program code), and the narrative description of the object in the user guide, are all attributes of a single (meta-)object identified by the common object name (such as, &quotuser index&quot or &quotchart&quot).
+<br><br>
+Oochis EHR's business objects do not have separate formalized, &quotvisual metaphors,&quot or, &quotpresentation objects.&quot Semantically and syntactically (or precisely), every Oochis EHR business object is a proper professional medical business object whose behavior, attributes, relationships, constraints, content, and processes are all dictated in a single container: the object's source code file.
+<br>
+<ol>
+   <li>Locate the relevant program code for the business object by searching (for example, query, &quotoptimizedLifeExpectancy&quot in the source code for the language used to describe the business object (or your, &quotidea&quot).'
+   <li>The code will be in a method, or in the body of a class. If in a method, extract out the method, if in a class, extract out the class's body. Remove all extraneous code that does not interact with the business object. This is source code.
+   <li>Change the syntax (each sentence) from object language to natural language while retaining the logic. Their may be many versions in various states of rendition between the requirements and the source code. This is pseudo-code transmutable between business application objects.
+   <li>The medical business objects are now available for vetting.
+   <li>Transliterate the changes (change the syntax or text) into source code.
+   <li>Change the syntax to object language from natural language expression while retaining the logic. Implement any changes to the source code.
+   <li>Test the change.
+   <li>Record changes to the source code along with all business objects, including executive any other administrative documents (work orders, project plans).
+   <li>Vet if it fulfills the requirement(s). If so, document the change, if not, go back to step 1.
+</ol>
+</p>
+</body>
+</html>

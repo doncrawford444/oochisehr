@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="oochis manual.css">
+</head>
+<body>
+<h2 id="sectionHeader">2.8.4 Treatment analysis</h2>
+<p id="indentedParagraph">
+<font color="#8B0000">'Treatment analysis'</font> ('Decision Support' &#8594 'Treatment analysis'):<br>
+'Treatment analysis' provides and contains the basic tools: 'Cost analysis'; 'Treatment effect'; 'Decision
+models'; 'Life expectancy'; and 'Optimized life expectancy.'
+to convey analyses (such as the 'Cost analysis', 'Treatment effect', 'decision models', and life curves)
+and portable forms.
+<br><br>
+A special not about context: objects must be named, and where possible used, even in standard
+protocoling... The &quotelectronic&quot part of any &quottreatment analysis&quot proper, is not more than the human part.
+As well, general software not relegated to the domain of health information is used to record all kinds
+of notes and create all kinds of documents including spreadsheets, emails, and texts, and provide
+critical voice communication services. The 'Treatment analysis' object provides a standard set of
+&quottreatment analytics&quot tools, as well as providing for DS as per NCO criteria.
+<br><br>
+Wrote and peer-supported knowledge and services, as well mnemonic symbols and diagrams in paper
+and pen, chalkboards, and white boards are more important - general global context - than electronic
+'Treatment analysis'; yet 'Treatment analysis' provides standard electronic tools (or applications, or
+&quotapps&quot), as well as providing for DS as per NCO criteria. Moreover the ability to integrate other
+software components (such as other HIS components) within the 'Decision Support' &#8594 'Treatment
+analysis' component as in-house customized practice applications is one of the most
+powerful aspects of the Oochis EHR solution. This is more user-controlled treatment analysis, that
+combined with the CHIS/EHR architectural model (see CHIS/EHR figures), fully encompasses
+modern, standard, and (currently and standardizing 50 years into the future) state-of-the-art in medical
+business object and health IT processing.
+<br><br>
+See, &quotCustomizing,&quot for further information on programming and customizing.
+<br><br>
+The Treatment analysis panel contains a menu-bar that applies to 'Cost analysis'; 'Treatment effect';
+'Decision models' only. These features are considered provider information. Life expectancies and
+optimized life expectancies are calculated directly from (and require) a patient chart.
+<br><br>
+The buttons on the menu bar all perform the same actions regardless of whether a 'Cost analysis' a
+'Treatment analysis' or a 'Decision Models' is open.
+<br><br>
+Life expectancy and optimized life expectancy are calculated using only EHR data, not user-entered
+data, and so there is no savable data except that already saved in the EHR. Therefore only the menu-bar
+buttons' 'Send', 'Add note', and, 'Print' are active.
+<br><br>
+If 'Cost analysis' is selected, then the menubar buttons pertain to the 'Cost analysis'.
+there is no file, just calculations based on an open chart's data
+<br><br>
+The life expectancy curve is not a treatment analysis proper, but is used in place of a mortality rate
+alone to describe any affects on life-span. together with the patients mortality-affecting EHR entries
+may provide a more intuitive model of the effects of mortality rates than the numerical rate alone. and
+exhaustive, or &quottotal&quot effect on life may provide more proficient treatment planning (quicker, easier,
+and more [descriptive] content).
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'New'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'New'):<br>
+Click 'New' to create a new 'Treatment analysis' (a cost analysis, treatment effect curve, or decision model). An input panel will be displayed to enter a name for the new analysis. Click 'Save' when finished entering the new name.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Open'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Open'):<br>
+Clicking 'Open' displays a scrollable list of all saved treatment analyses in the selected analysis type ('Cost analysis', 'Treatment effect' curve, or 'Decision model').
+<br><br>
+Alternatively, open by entering the name in the autofilled name entry field and press the &quotEnter&quot key or click, 'OK'.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Close'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Close'):<br>
+Closes the open 'Treatment analysis'. If the open 'Treatment analysis' is not saved, a prompt will be displayed requesting whether to save any changes before closing.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Save'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Save'):<br>
+Clicking 'Save' saves the currently selected 'Treatment analysis'.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Save as'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Save as'):<br>
+Click, 'Save as (a different named file)' to save a 'Treatment analysis' under a different name. A name-entry dialog panel will be displayed to enter the new 'Treatment analysis' name. Click 'OK' or press the 'Enter' key after entering the new name.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Send'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Send'):<br>
+Clicking 'Send' opens the Messaging window and attaches the 'Treatment analysis' to a new email to 'Send'. The email out-box's &quotTo: &quot field will gain the cursor for further input.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Add note'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Add note'):<br>
+Clicking 'Add note' opens the Note pad' and attaches the 'Treatment analysis'. A note can be added anywhere to a page, and if placed on an item, becomes an attachment to that item (see...item attachments).
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Print'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Print'):<br>
+Opens a print dialog panel for printing.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Cost analysis'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost analysis'):<br>
+'Cost analysis' contains a 2D graph plot with cost plotted along the horizontal axis and utility along the vertical. The points are used to calculate ICER values, ranked according to utility, then plotted and connected together into a line graph. All of this is together on one page, with a page header stating the name of the cost analysis, when it was created, when it was last modified, and by whom (last modified it).
+<br><br>
+The page is useful to analyze and convey if - and where - the curve starts to become asymptotic (see below).
+<br><br>
+The page can also be attached to an order.
+<br><br>
+Where an inexpensive prescription has a more relative benefit to a patient.
+<br><br>
+All pages, including 'Cost analysis' can also be quickly referenced, attached to health orders and items, and sent as an attachment to a text message or email.
+<br><br>
+The point where (the increase in) cost becomes negligible (or becomes unreasonably justifiable) is generally where the curve starts to become straight (see figure).
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Cost analysis'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost analysis' &#8594 'Treatment name: '):<br>
+Enter the 'Treatment name: ' name for the cost-utility point.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Cost: '</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost analysis' &#8594 'Cost: '):<br>
+
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Utility'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost analysis' &#8594 'Utility: '):<br>
+
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'OK'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost analysis' &#8594 'OK: '):<br>
+
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Are effectiveness values quality adjusted?'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost analysis' &#8594 'Are effectiveness values quality adjusted?'):<br>
+
+</p>
+<p id="indentedParagraph60px">
+<font color="#8B0000">'Yes'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost
+analysis' &#8594 'Are effectiveness values quality adjusted?' &#8594 'Yes'):<br>
+
+</p>
+<p id="indentedParagraph60px">
+<font color="#8B0000">'No'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost
+analysis' &#8594 'Are effectiveness values quality adjusted?' &#8594 'No'):<br>
+
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Ranked points'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Cost analysis' &#8594 'Ranked points'):<br>
+'Cost analysis': ICER values and plots of cost over utility or quality-adjusted effectiveness.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Treatment effect'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Treatment effect'):<br>
+'Add treatment time-point:'
+'Treatment name:'
+'Treatment effect:'
+'Time:'
+'Unit of time:'
+'OK'
+
+'Add control time-point:'
+'Control name:'
+'Control effect:'
+'Time:'
+'Unit of time:'
+'OK'
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Decision models'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Decision models'):<br>
+Standard decision models
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Life expectancies'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Life expectancies'):<br>
+Since Life expectancy and optimized life expectancy features are calculations, and do not use any data except EHR data, the 'New', 'Open', 'Close', 'Save', 'Save as' buttons are inactivated; menu-bar buttons' 'Send', 'Add note', and, 'Print' remain active. To return to the life expectancy calculations for a patient, re-open the patient's chart. Life calculations are standard calculations that take in standard mortality rates for (amongst many other considerations): age; BMI; disease states (asthma, arthritis, diabetes), conditions (smoking, occupation, pregnancy), and therefore use EHR data, not user-entered (thusly not savable) data.
+<br><br>
+'Treatment Analysis's Life expectancy calculations no longer display information when a chart closes.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Average life span, 1969 to 2008'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Life expectancy' &#8594
+'Average life span, 1969 to 2008' ):<br>
+This is a &quotpop-up&quot display panel providing reference, or baseline life curves in order to see what they look like, and how they are changing over time. They are useful to compare with extrapolated life curves, as well as give a baseline to patient life expectancies, as well as the affect on life spans over time for a mortality change.
+<br><br>
+Average life spans for the indicated sex and race are plotted against the calendar year, from 1969 to 2008:
+<br><br>
+Average life spans are given for:
+<ul>
+   <li>Both sexes, all races:</li>
+   <li>Males, all races:</li>
+   <li>Females, all races:</li>
+   <li>Black males:</li>
+   <li>Black females:</li>
+   <li>White males:</li>
+   <li>White females:</li>
+</ul>
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Actuarial life expectancy'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Life expectancy' &#8594
+'Actuarial life expectancy' ):<br>
+The 'Actuarial life expectancy' panel is the life expectancy curve that is displayed when at the 'Life
+expectancy' panel.
+<br><br>
+'Actuarial life expectancy' panel is the nominal set of - the unmodified calculations of - life expectancy
+from extant mortality (existing conditions).
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Life expectancy ages 0 to 100, 2011'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Life expectancy'
+&#8594 'Life expectancy ages 0 to 100, 2011' ):<br>
+2011 life expectancy per year from 1 to 100:
+<ul>
+   <li>Non Hispanic black females</li>
+   <li>Non Hispanic white males</li>
+   <li>Non Hispanic black males</li>
+   <li>Non Hispanic white females</li>
+   <li>Hispanic females</li>
+   <li>White males:</li>
+   <li>White females:</li>
+   <li>Black males</li>
+   <li>Black females</li>
+</ul>
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Optimized life expectancy'</font> ('Decision Support' &#8594 'Treatment analysis' &#8594 'Life expectancy' &#8594
+'Optimized life expectancy'):<br>
+The increase per year is added to the actuarial life expectancies to get the baseline medical life expectancies.
+<br><br>
+Infa.: Infallibility factor of the expected treatment (0 = disease state, 1 = never fail). An infallibility factor of 0.7 means the treatment (such as a replacement heart) will function at .7 (70% of the disease-state mortality, pending a complete procedure).
+<br><br>
+Proc.: Procedural completeness factor of the expected treatment (0 = not performed, 1 = complete). A procedural completeness factor of 1.0 means the treatment (replacement heart is fully functioning without any remaining heart tissue. Treatment analysis often uses life years or quality-adjust life years (quality-years, or &quotqualys,&quot often capitalized, &quotQUALYS&quot). This term for quality could be factored together with infallibility.
+<br><br>
+The product of these two factors is what reduces the mortality caused by the disease(s).
+<br><br>
+The 'Life expectancy' graph is no longer displayed when a chart closes.
+<br><br>
+'Life expectancy (and it's sub-feature, 'Optimized life expectancy')....save', or 'save as' because it is calculated with every open and closed chart.
+</p>
+</body>
+</html>

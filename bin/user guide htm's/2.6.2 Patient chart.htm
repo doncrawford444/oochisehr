@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="oochis manual.css">
+</head>
+<body>
+<h2 id="sectionHeader">2.6.2 Patient chart</h2>
+<p id="indentedParagraph">
+<font color="#8B0000">'Patient chart'</font> ('Charting' &#8594 'Patient chart'):<br>
+A chart is divided into five tabbed sections: &quotChart cover;&quot &quotDemographics;&quot &quotActivities;&quot &quotHistory;&quot and &quotInsurance.&quot Each section is described in detail below:
+<br><br>
+A chart (also known as a, &quotpatient chart;&quot a, &quothealth record;&quot and a, &quotmedical record&quot) is where to record, manage, and view, patient health information. Recorded patient health information is EHR data. Detailed pages are the complete printable EHR. All pages in the Oochis EHR application not in an EHR are provider information.
+<br><br>
+An EHR is not, &quotall the information on a patient.&quot Provider information (treatment plans, provider-specific content, prescription web pages to source a patient's medicine) may or may not also be confidential patient information (clinical notes, incoming laboratory results, logs of medical orders). EHR content is recorded patient health information. A provider enters health information into an EHR.
+<br><br>
+When new items are entered, whether demographic, insurance, or orders, the technical encoded details are automatically recorded. The recorded details are specified by rules that come with each medical code set (see &quotAppended encoded chart data&quot).
+<br><br>
+Clicking 'View details' (vs. 'View medical forms') displays all the details of existing demographics and insurance EHR data by moving to that item in the detailed page (and vs. versus.).
+<br><br>
+All chart data are contained in chart detail pages regardless of whether-or-not their is a correlated area on any provider-created medical form.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Chart cover'</font> ('Charting' &#8594 'Patient chart' &#8594 'Chart cover'):<br>
+The chart cover displays provider-specified chart information that identifies a patient and provides a problem-oriented synopsis (similar to a hospital ticket?). Examples of chart cover items may include: a patient photo; a patient name; the chief complaint; the last few encoded entries; or insurance information.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Demographics'</font> ('Charting' &#8594 'Patient chart' &#8594 'Demographics'):<br>
+The 'Demographic' section contains medical forms with practice-specified demographic information coded (attributed to the data entered in the forms' fields) in the 'System' 'Templates' panel.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Activities'</font> ('Charting' &#8594 'Patient chart' &#8594 'Activities'):<br>
+The Activities section does not use forms created in the 'System' 'Templates' panel. The 'Activities' section records medical entries in the CPOE panel instead of using forms and entry fields.
+<br><br>
+'Logs' and 'Activities' items record data when orders are entered.
+<br><br>
+'Decision Support' 'Translational Medicine' and 'Decision Support' 'Treatment Analyses' 'Life-curve' features re-calculate data when EHR changes.
+<br><br>
+EHR changes when orders are imported, incoming, as well as (newly) entered.
+<br><br>
+'Decision Support' 'Treatment Analyses' 'Decision models'; 'Cost analyses'; and 'Treatment effectiveness' features re-calculate when various planned (possible) treatments (and therapies [courses of treatments]) are entered. They save but do not record to an EHR per se.
+<br><br>
+To transfer items to the History section, select the items and drag them to the History tab. Items may be moved back to the 'Activities' section the same way.
+</p>
+<p id="indentedParagraph40px">
+<font color="#8B0000">'Order-entry: '</font> ('Charting' &#8594 'Patient chart' &#8594 'Activities' &#8594 'Order-entry: '):<br>
+The 'Order-entry' panel is positioned immediately below the top of the chart and above the 'Activities' pages. Information is entered into the 'Activities' section exclusively through the 'Order-entry' panel.
+<br><br>
+The POE panel is not part of any health record, nor is it printable (though the order slip is). However, the output from the POE panel (such as any diagnoses, procedures, or biological orders) are immediately recorded as order entries in the Activities section. Order entries are listed as items on the chart pages.
+<br><br>
+All completed orders must still be signed off (in the 'Charting' menu bar) before it is processed (see Chart entry signing and processing). The processing phases of orders are indicated on the order item.
+<br><br>
+Order-entries are automatically processed, though not necessarily completed, when signed.
+<br><br>
+4 categories...Unsigned, incomplete, requires further input; and processed.
+<br><br>
+In general, the processing states of order entries (or, &quotorder items,&quot as viewed on any page):
+<br><br>
+Unsigned: An un-processed working entry visible only to the user--until signed; unsigned data is not usable as health information (until signed).
+<br><br>
+Incomplete: Signed and processing. Such as a prescription being accepted for dispensing at a pharmacy, ...
+<br><br>
+Requires input. The item requires user input for further processing. Such as receipt of failures in processing, queries, further requested information, and the return of laboratory results.
+<br><br>
+Completed. The background color of completed orders is the page's background color.
+<br><br>
+The CPOE panel is attached to the 'Activities' section. When a chart is not open, the CPOE panel is not present.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'History'</font> ('Charting' &#8594 'Patient chart' &#8594 'History'):<br>
+Information is not created in the History section. Information from the 'Activities' section is transferred to the 'History' section by dropping the 'Activities' item onto the 'History' tab. The 'History' section only has detailed pages. The 'Activities' section presents a longitudinal architecture. Any account holder authorized to manage the 'Activities' and 'History' sections may move items from the 'Activities' to 'History' sections. Health information in the EHR remains the same, no data is changed by moving items between sections. The 'History' section provides a straightforward longitudinal problem-oriented faculty to the 'Activities' section.
+</p>
+<p id="indentedParagraph20px">
+<font color="#8B0000">'Insurance'</font> ('Charting' &#8594 'Patient chart' &#8594 'Insurance'):<br>
+The Insurance section contains medical insurance forms with practice-specified billing and claims information coded (into the forms) in the 'Templates' panel.
+</p>
+</body>
+</html>
